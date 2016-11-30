@@ -19,8 +19,8 @@ public class Main {
         //5. Определить, войдет ли в конверт с внутренними размерами a и b мм прямоугольная открытка размером с и d мм. Для размещения открытки в конверте необходим зазор в 1 мм с каждой стороны.
         int envSideA = 120;
         int envSideB = 80;
-        int cardSideC = 119;
-        int cardSideD = 79;
+        int cardSideC = 118;
+        int cardSideD = 78;
         System.out.println("\n<Task 5>\nCard " + cardSideC + "x" + cardSideD + " fits to the envelope " + envSideA + "x" + envSideB + ": " + giftCardSize(envSideA, envSideB, cardSideC, cardSideD));
         //6. Даны два различных вещественных числа. Определить наибольшее из них применив один неполный условный оператор.
         float numOne = 50.2F;
@@ -29,7 +29,7 @@ public class Main {
         /*7. Записать условие, которое является истинным, когда:
         a) только одно из чисел А и В четное;
         б) хотя бы одно из чисел А и В положительно;*/
-        System.out.println("\n<Task 7>\na) " + compareNumA(6, 5));
+        System.out.println("\n<Task 7>\na) " + compareNumA(5, 5));
         System.out.println("b) " + compareNumB(-1, 2));
         //8. Напечатать таблицу соответствия между весом в фунтах и весом в килограммах для значений 1, 2, ..., 10 фунтов (1 фунт = 453 г).
         System.out.println("\n<Task 8>\n" + poundsToKg());
@@ -75,9 +75,9 @@ public class Main {
     public static float[] eachMonthIncDeposit(byte currentMonth, int amount, float rate) {
         final byte YEAR = 12;
         float[] eachMonthIncDeposit = new float[YEAR - currentMonth];
-        eachMonthIncDeposit[0] = amount;
+        eachMonthIncDeposit[0] = 0;
         for (int i = 1; i < (YEAR - currentMonth); i++) {
-            eachMonthIncDeposit[i] = eachMonthIncDeposit[i - 1] + (eachMonthIncDeposit[i - 1] * rate);
+            eachMonthIncDeposit[i] = ((amount + eachMonthIncDeposit[i-1]) * rate);
         }
         return eachMonthIncDeposit;
     }
@@ -90,14 +90,17 @@ public class Main {
         return amountOfDepositAfterInsPer;
     }
 
-    public static boolean giftCardSize(int envelopeInsSideOne, int envelopeInsSideTwo, int giftCardSideOne, int giftCardSideTwo) {
-        boolean goodCardSize = false;
-        if ((envelopeInsSideOne > giftCardSideOne) && (envelopeInsSideTwo > giftCardSideTwo))
-            return goodCardSize = true;
-        else if ((envelopeInsSideOne > giftCardSideTwo) && (envelopeInsSideTwo > giftCardSideOne))
-            return goodCardSize = true;
-        else return goodCardSize = false;
+    public static boolean giftCardSize(int envelopeInsSideA, int envelopeInsSideB, int giftCardSideA, int giftCardSideB) {
+        int rotateTheCard = 0;
+        if (giftCardSideB > giftCardSideA) {
+            rotateTheCard = giftCardSideA;
+            giftCardSideA = giftCardSideB;
+            giftCardSideB = rotateTheCard;
+        }
+        if (((envelopeInsSideA - 2) >= giftCardSideA) && ((envelopeInsSideB - 2) >= giftCardSideB)) return true;
+        else return false;
     }
+
 
     public static float whichNumBigger(float numOne, float numTwo) {
         float whichNumBigger = numOne;
@@ -106,7 +109,7 @@ public class Main {
     }
 
     public static boolean compareNumA(int numOne, int numTwo) {
-        if (((numOne % 2) == 0) && ((numTwo % 2) > 0) || ((numOne % 2) > 0) && ((numTwo % 2) == 0)) return true;
+        if (((numOne % 2) == 0)^((numTwo % 2) == 0)) return true;
         else return false;
     }
 
