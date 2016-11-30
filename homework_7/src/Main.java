@@ -1,10 +1,9 @@
-
 public class Main {
     public static void main (String[] args){
         /*1. Составить программу, которая в зависимости от порядкового номера месяца (1, 2, ..., 12) выводит на экран количество дней в этом месяце. Рассмотреть два случая:
         1) год не является високосным;
         2) год может быть високосным (информация об этом вводится в аргументы при запуске программы).*/
-        System.out.println("<Task 1>\nDays in month: " + daysOfMonth((byte) 2, true));
+        System.out.println("<Task 1>\nDays in month: " + daysOfMonth((byte) 2, args));
         /*Мастям игральных карт условно присвоены следующие порядковые номера: масти "пики" — 1, масти "трефы" — 2, масти "бубны" — 3, масти "червы" — 4,
         а достоинству карт: "валету" — 11, "даме" — 12, "королю" — 13, "тузу" — 14 (порядковые номера карт остальных достоинств соответствуют их названиям: "шестерка", "девятка" и т. п.).
         По заданным номеру масти m (1 <= m <=  4) и номеру достоинства карты k (6 <= k <= 14) определить полное название (масть и достоинство) соответствующей карты в виде "Дама пик", "Шестерка бубен" и т. п.*/
@@ -45,7 +44,8 @@ public class Main {
        Book bookF = new Book("NameF", "AuthorF", 2015, bookType.scienceFiction);
     }
 
-    public static byte daysOfMonth(byte numOfMonth, boolean isLeapYear){
+    public static byte daysOfMonth(byte numOfMonth, String[] args){
+        boolean isLeapYear = Boolean.valueOf(args[0]);
         byte daysOfMonth;
         switch (numOfMonth){
             case 1: daysOfMonth = 31; return daysOfMonth;
