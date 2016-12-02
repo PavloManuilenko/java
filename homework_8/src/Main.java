@@ -6,19 +6,18 @@ public class Main {
         int[] arrOfSameAndNumsDiff = new int[] {1, 2, 3, 3, 4, 5, 5, 5, 6, 6, 7, 8, 8, 8, 8, 9, 9, 10, 10, 11};
         int[] speedOfCars = new int[] {100, 220, 90 , 60, 140, 100, 110, 120, 160, 80, 140, 180, 200, 160, 180, 290, 250, 280, 130, 310, 100, 120, 90 , 60, 140, 100, 110, 120, 160, 80, 140, 180, 200, 160, 180, 290, 250, 280, 130, 310};
         int[] sequence = new int[] {100, 75, 50, 25, 0};
-        double[] arrOfDoubNums = new double[] {-5.2, 5.2, 6.8, 7.1, 4.3};
-        int num = 1000;
+        double[] arrOfDoubNums = new double[] {-5.2, -2.0, -1, 5.2, 6.8, -7.1, 4.3, -3.2};
+        int num = 123456;
         System.out.println("<Task 1>\n" + avgOfLongIntArr(arrOfNums, false));
         System.out.println("\n<Task 2>\n" + avgOfLongIntArrM(arrOfNums, 20, false));
         System.out.println("\n<Task 3>\n" + sameAndDiffNumsInArr(arrOfSameAndNumsDiff));
         System.out.println("\n<Task 4>\n" + maxSpeedOf2Cars(speedOfCars));
         System.out.println("\n<Task 5>\n" + sumAndNumOfArr(sequence));
-        System.out.println("\n<Task 6>\n");
+        System.out.println("\n<Task 6>\n" + countOfNegativeNum(arrOfDoubNums));
         System.out.println("\n<Task 7>\nMax: " + lookingForMaxNnum(132233));
-        //System.out.println("\n<Task 8>\nNum is: " + num + "mirror num is: " + mirrorNum(num));
+        System.out.println("\n<Task 8>\nNum is: " + num + " mirror num is: " + mirrorNum(num));
         System.out.println("\n<Task 9>\n" + numberToWords(99));
         System.out.println("\n<Task 10>\n" + studentMark((byte) 100));
-
     }
 //1. Найти среднее арифметическое элементов массива, больших числа 10. * Решить задачу при помощи циклов while и for-each
     public static int avgOfLongIntArr(int[] arr, boolean isUseWhile) { //while
@@ -116,7 +115,15 @@ public class Main {
         return sumAndNumOfArr += sum + " and " + count;
     }
 //6. Дана последовательность из n вещественных чисел, начинающаяся с отрицательного числа. Определить, какое количество отрицательных чисел записано в начале последовательности. Условный оператор не использовать.
-
+    public static int countOfNegativeNum(double[] arr) {
+        int countOfNegativeNum = 0;
+        int i = 0;
+        while (arr[i] < 0) {
+            countOfNegativeNum++;
+            i++;
+        }
+        return countOfNegativeNum;
+    }
 //7. Дано натуральное число. Определить, сколько раз в нем встречается максимальная цифра (например, для числа 132233 ответ равен 3, для числа 46 336 — 2, для числа 12 345 — 1). * Задачу решить, не используя два прохода по массиву.
     public static int lookingForMaxNnum(int num) {
         int lookingForMaxNnum = 0;
@@ -134,15 +141,22 @@ public class Main {
         return lookingForMaxNnum;
     }
 //8. Дано число. Написать программу, которая возвращает его зеркальное отражение в виде числа.
-    /*public static int mirrorNum(int num) {
+    public static int mirrorNum(int num) {
         int mirrorNum = 0;
-        String temp = null;
-        while (num < 0) {
-            temp += num%10;
+        int mirror = 0;
+        int i = num;
+        while (num > 0) {
+            mirror = num % 10;
+            while (i > 1) {
+                mirror *= 10;
+                i /= 10;
+            }
+            mirrorNum += mirror;
             num /= 10;
+            i = num;
         }
-        return mirrorNum = Integer.valueOf(temp);
-    }*/
+        return mirrorNum;
+    }
 //9. Дано двузначное число. Необходимо написать программу, которая вернет строковое представление данного числа. Например, дано число 34, его строковое представление - thirty four.
     public static String numberToWords(int num) {
         String numberToWords = "Wrong number [waiting for a two-digit number]";
