@@ -1,3 +1,6 @@
+/*
+2) Объявить класс перечислений Faculty у которого будут свойства nameEn(строка), nameRu(строка), и элементы перечисления: GRYFFINDOR, SLYTHERIN, HUFFLEPUFF, RAVENCLAW.
+*/
 public enum Faculty {
         GRYFFINDOR("Gryffindor", "Гриффиндор"),
         SLYTHERIN ("Slytherin", "Слизерин"),
