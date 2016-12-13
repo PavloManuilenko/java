@@ -174,4 +174,23 @@ public class AListTest {
         //then
         assertEquals("Error! Actual should 11", expected, actual);
     }
+
+    @Test
+    public void shouldDecreaseArrayLengthToTen() throws Exception {
+        //given
+        int expected = 10;
+
+        //when
+        for (int i = 0; i < 9; i++) {
+            list.add(i + 1);
+        }
+        list.remove();
+        list.remove();
+        list.remove();
+        list.remove();
+        int actual = list.getArrLength();
+
+        //then
+        assertEquals("Error! Actual should 11", expected, actual);
+    }
 }

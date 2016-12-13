@@ -5,6 +5,7 @@ public class AList {
     private float maxLoad = 0.8f;
     private float minLoad = 0.6f;
     private int[] array;
+    private static final float MIN_SIZE = 10;
 
     public AList() {
         this.initialSize = 10;
@@ -39,7 +40,7 @@ public class AList {
             array[--size] = 0;
         }
         float currentLoad = size / initialSize;
-        if (currentLoad <= minLoad) {
+        if (currentLoad <= minLoad && array.length > MIN_SIZE) {
             initialSize = (int)(size * 1.5);
 
             int[] temp = new int[initialSize];
