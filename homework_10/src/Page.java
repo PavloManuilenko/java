@@ -24,4 +24,29 @@ public class Page {
             photos[photoNum].setTitle(title);
         }
     }
+
+    public int getPageNum() {
+        return pageNum;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (obj == this) return true;
+        if (obj instanceof Page) {
+            Page page = (Page) obj;
+            if (this.photos != null && pageNum >= 0) {
+                return page.getPageNum() == this.pageNum;
+            }
+        }
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 1;
+        hash *= 17 + pageNum;
+        hash *= 20 + photos.length;
+        return hash;
+    }
 }
