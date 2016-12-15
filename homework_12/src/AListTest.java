@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class AListTest {
 
     AList list;
-
+//Покрыть всю функциональность достаточным количеством тестов.
     @Before
     public void SetUp() {
         list = new AList();
@@ -450,14 +450,14 @@ public class AListTest {
     @Test
     public void shouldRemoveLastElemByIndex() throws Exception {
         //given
-        int expected = 0;
+        int expected = 9;
 
         //when
         for (int i = 0; i < 10; i++) {
             list.addLast(i + 1);
         }
         list.removeByIndex(9);
-        int actual = list.get(9);
+        int actual = list.size();
 
         //then
         assertEquals("Error! Actual should be ", expected, actual);
@@ -476,25 +476,129 @@ public class AListTest {
         int actual = list.getArrLength();
 
         //then
-        assertEquals("Error! Actual should 11", expected, actual);
+        assertEquals("Error! Actual should 12", expected, actual);
     }
-/*
+
     @Test
-    public void shouldDecreaseArrayLengthIfUseAddIntoBegin() throws Exception {
+    public void shouldDecreaseArrayLengthIfUseAddByIndex() throws Exception {
         //given
         int expected = 10;
 
         //when
         for (int i = 0; i < 9; i++) {
-            list.addFirst(i + 1);
+            list.addByIndex(i+1, i);
         }
-        list.removeFirst();
-        list.removeFirst();
+        list.removeByIndex(2);
+        list.removeByIndex(2);
         int actual = list.getArrLength();
 
         //then
         assertEquals("Error! Actual should be 10", expected, actual);
     }
-    */
 
+    @Test
+    public void shouldReturnMinusIfElemWasNotFound() throws Exception {
+        //given
+        int expected = -1;
+
+        //when
+        for (int i = 0; i < 10; i++) {
+            list.addByIndex(i+10, i);
+        }
+        int actual = list.indexOf(9);
+
+        //then
+        assertEquals("Error!  Actual should be -1", expected, actual);
+    }
+
+    @Test
+    public void shouldReturnIndexIfElemWasFound() throws Exception {
+        //given
+        int expected = 11;
+
+        //when
+        for (int i = 0; i < 10; i++) {
+            list.addByIndex(i+10, i);
+        }
+        int actual = list.indexOf(11);
+
+        //then
+        assertEquals("Error!  Actual should be 11", expected, actual);
+    }
+
+    @Test
+    public void shouldReturnIndexIfLastElemWasFound() throws Exception {
+        //given
+        int expected = 19;
+
+        //when
+        for (int i = 0; i < 10; i++) {
+            list.addByIndex(i+10, i);
+        }
+        int actual = list.indexOf(list.get(list.size()-1));
+
+        //then
+        assertEquals("Error!  Actual should be 11", expected, actual);
+    }
+
+    @Test
+    public void shouldReturnElementsAsStringWithSeparators() throws Exception {
+        //given
+        String expected = "1|2|3|4|5|";
+
+        //when
+        for (int i = 0; i < 5; i++) {
+            list.addByIndex(i+1, i);
+        }
+        String actual = list.toString('|');
+
+        //then
+        assertEquals("Error!  Actual should be \"1|2|3|4|5|\"", expected, actual);
+    }
+
+    @Test
+    public void shouldReturnArraySortedAsc() {
+        //given
+        String expected = "1|2|3|4|5|";
+
+        //when
+        for (int i = 5; i > 0; i--) {
+            list.addLast(i);
+        }
+        list.sortAsc();
+        String actual = list.toString('|');
+
+        //then
+        assertEquals("Error! Actual should be \"1|2|3|4|5|\"", expected, actual);
+    }
+
+    @Test
+    public void shouldReturnArraySortedDesc() {
+        //given
+        String expected = "5|4|3|2|1|";
+
+        //when
+        for (int i = 1; i < 6; i++) {
+            list.addLast(i);
+        }
+        list.sortDesc();
+        String actual = list.toString('|');
+
+        //then
+        assertEquals("Error! Actual should be \"5|4|3|2|1|\"", expected, actual);
+    }
+
+    @Test
+    public void shouldReceptionArray() {
+        //given
+        int[] arr = new int[] {50, 40, 30, 20, 10};
+        String expected = "50|40|30|20|10|";
+
+        //when
+        list.AList(arr);
+        String actual = list.toString('|');
+
+        //then
+        assertEquals("Error! Actual should be \"50|40|30|20|10|\"", expected, actual);
+    }
 }

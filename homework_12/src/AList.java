@@ -1,3 +1,5 @@
+import jdk.nashorn.internal.ir.IfNode;
+
 public class AList {
     private int initialSize;
     private int size = 0;
@@ -15,6 +17,11 @@ public class AList {
         this.initialSize = initialSize;
         this.array = new int[initialSize];
     }
+//Добавить конструктор принимающий массив.
+    public void AList(int[] arr) {
+        this.array = arr;
+        size = arr.length;
+    }
 
     public int size() {
         return size;
@@ -24,9 +31,7 @@ public class AList {
         float currentLoad = size/(initialSize * 1.0f);
         if (currentLoad >= maxLoad) {
             initialSize = (int) (size * 1.5);
-
             int[] temp = new int[initialSize];
-
             for (int i = 0; i < size; i++) {
                 temp[i] = array[i];
             }
@@ -51,7 +56,7 @@ public class AList {
             array = temp;
         }
     }
-
+//добавления/удаления элемента из начала списка
     public void addFirst(int num) {
         float currentLoad = size/(initialSize * 1.0f);
         if (currentLoad >= maxLoad) {
@@ -95,7 +100,8 @@ public class AList {
             array = temp;
         }
     }
-
+//добавления/удаления элемента из середины списка (по индексу), при этом в случае добавления элемента по индексу который уже занят другим значением,
+//делать вставку нового элемента смещая все последующие элементы списка на одну позицию в конец массива, а в случае удаления - смещать все элементы в начало списка
     public void addByIndex(int num, int index) {
         float currentLoad = size/(initialSize * 1.0f);
         if (currentLoad >= maxLoad) {
@@ -118,6 +124,7 @@ public class AList {
             for (int i = index+1; i < array.length; i++) {
                 temp[i] = array[i-1];
             }
+            size++;
             array = temp;
         }
     }
@@ -129,6 +136,7 @@ public class AList {
             for (int i = index; i < size; i++) {
                 array[i] = array[i+1];
             }
+            size--;
 
         }
         float currentLoad = size / initialSize;
@@ -142,7 +150,6 @@ public class AList {
             }
             array = temp;
         }
-
     }
 
     public int get(int index) {
@@ -152,5 +159,45 @@ public class AList {
 
     public int getArrLength() {
         return array.length;
+    }
+//получение индекса элемента по значению (indexOf), в случае если элемент был не найден возвращать значение -1
+    public int indexOf(int valueOfTheItem) {
+        int indexOf = -1;
+        for (int i = 0; i < size; i++) {
+            if (array[i] == valueOfTheItem) {
+                indexOf = array[i];
+                break;
+            }
+        }
+        return indexOf;
+    }
+//метод, который принимает разделитель и возвращает все элементы списка через разделитель в виде строки
+    public String toString( char separator) {
+        String toString = "";
+
+        for (int i = 0; i < size; i++) {
+            toString += array[i] + "" + separator;
+        }
+        return toString;
+    }
+//сортировка по возрастанию и убыванию используя алгоритм сортировки вставками
+    public void sortAsc() {
+        int temp;
+        for (int i = 1; i < size; i++)
+            for (int j = i; j > 0 && array[j-1] > array[j]; j--) {
+                temp = array[j-1];
+                array[j-1] = array[j];
+                array[j] = temp;
+            }
+    }
+
+    public void sortDesc() {
+        int temp;
+        for (int i = 1; i < size; i++)
+            for (int j = i; j > 0 && array[j-1] < array[j]; j--) {
+                temp = array[j-1];
+                array[j-1] = array[j];
+                array[j] = temp;
+            }
     }
 }
