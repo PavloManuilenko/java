@@ -73,7 +73,13 @@ public class Bar {
 
     public void fireEmployee(String name, String position) {
         if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters != waiters.length) ) {
-            waiters[waiters.length - countOfWaiters++] = null;
+            for (int i = (waiters.length - countOfWaiters) - 1; i > countOfWaiters; i--) {
+                if (name.compareToIgnoreCase(waiters[i].name) == 0) {
+                    waiters[i] = null;
+                    countOfWaiters++;
+                    break;
+                }
+            }
         }
         else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen != barmen.length) ) {
             barmen[barmen.length - countOfBarmen++] = null;

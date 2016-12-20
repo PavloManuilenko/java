@@ -140,5 +140,37 @@ class BarTest extends spock.lang.Specification {
         expected == actual
     }
 
+    def "should return string of bar with fired waiter"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter")
+        bar.fireEmployee("Alex", "waiter")
+
+        when: "creation of expecting string"
+        def expected = "Bar: \"The Blue Oyster\"\n\nTips: 0"
+        def actual = bar.toString()
+
+        then: "strings compare"
+        expected == actual
+    }
+
+    def "should return string of bar with one waiter after firing of all other staff"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        for (int i = 0; i < 20; i++) {
+            bar.hireEmployee("Waiter", (byte)(30 + i), "waiter")
+        }
+        for (int i = 0; i < 19; i++) {
+            bar.fireEmployee("Waiter", "waiter")
+        }
+
+        when: "creation of expecting string"
+        def expected = "Bar: \"The Blue Oyster\"\nName: Alex, years old: 30\n\nTips: 0"
+        def actual = bar.toString()
+
+        then: "strings compare"
+        expected == actual
+    }
+
 
 }
