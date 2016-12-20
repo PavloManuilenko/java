@@ -80,6 +80,10 @@ public class Bar {
         }
     }
 
+    public void setBailiwickCocktail(String bailiwickCocktail, int index) {
+        barmen[index].bailiwickCocktail = bailiwickCocktail;
+    }
+
     @Override
     public String toString() {
         String str = "Bar: \"" + name + "\"\n";
