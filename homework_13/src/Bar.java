@@ -126,5 +126,4 @@ public class Bar {
         hash += waiters.hashCode();
         return hash;
     }
-
 }
