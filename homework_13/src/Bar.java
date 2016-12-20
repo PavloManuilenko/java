@@ -84,15 +84,15 @@ public class Bar {
     public String toString() {
         String str = "Bar: \"" + name + "\"\n";
         for (int i = barmen.length; i > countOfBarmen; i--) {
-            str += barmen[barmen.length - countOfBarmen].toString() + "\n";
+            str += barmen[i - (countOfBarmen + 1)].toString() + "\n";
         }
 
         for (int i = waiters.length; i > countOfWaiters; i--) {
-            str += waiters[waiters.length - countOfWaiters].toString() + "\n";
+            str += waiters[i - (countOfWaiters + 1)].toString() + "\n";
         }
 
         for (int i = drinks.length; i > storageFreeSpace; i--) {
-            str += drinks[drinks.length - storageFreeSpace].toString() + "\n";
+            str += drinks[i - (storageFreeSpace + 1)].toString() + "\n";
         }
         return str + "\nTips: " + tips;
     }
