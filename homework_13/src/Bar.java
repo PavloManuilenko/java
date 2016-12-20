@@ -51,6 +51,10 @@ public class Bar {
         }
     }
 
+    public Bar(String name) {
+        this.name = name;
+    }
+
     public void divideTips() {
         tipsForEach += tips / ((barmen.length - countOfBarmen) + (waiters.length - countOfWaiters));
         tips = 0;
@@ -78,7 +82,7 @@ public class Bar {
 
     @Override
     public String toString() {
-        String str = "Bar: \"" + name + "\n";
+        String str = "Bar: \"" + name + "\"\n";
         for (int i = barmen.length; i > countOfBarmen; i--) {
             str += barmen[barmen.length - countOfBarmen].toString() + "\n";
         }
