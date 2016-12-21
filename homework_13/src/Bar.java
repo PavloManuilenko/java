@@ -39,14 +39,17 @@ public class Bar {
 
     public void addToStorage(Drink drink) {
         if (null != drink) {
-            for (Drink i : drinks) {
-                if (i.nameOfDrink.equals(drink.nameOfDrink)) {
-                    i.countOfItem += drink.countOfItem;
-                    break;
+            for (int i = 0; i < drinks.length; i++) {
+                if (null != drinks[i]) {
+                    if (drinks[i].nameOfDrink.equals(drink.nameOfDrink)) {
+                        drinks[i].countOfItem += drink.countOfItem;
+                        break;
+                    }
                 }
                 else if (storageFreeSpace > 0) {
-                    drinks[drinks.length - storageFreeSpace--] = drink;
-                }
+                        drinks[drinks.length - storageFreeSpace--] = drink;
+                        break;
+                    }
             }
         }
     }
@@ -73,7 +76,7 @@ public class Bar {
 
     public void fireEmployee(String name, String position) {
         if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters != waiters.length) ) {
-            for (int i = (waiters.length - countOfWaiters) - 1; i > countOfWaiters; i--) {
+            for (int i = (waiters.length - countOfWaiters) - 1; i >= 0; i--) {
                 if (name.compareToIgnoreCase(waiters[i].name) == 0) {
                     waiters[i] = null;
                     countOfWaiters++;
@@ -82,7 +85,13 @@ public class Bar {
             }
         }
         else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen != barmen.length) ) {
-            barmen[barmen.length - countOfBarmen++] = null;
+            for (int i = (barmen.length - countOfBarmen) - 1; i >= 0; i--) {
+                if (name.compareToIgnoreCase(barmen[i].name) == 0) {
+                    barmen[i] = null;
+                    countOfBarmen++;
+                    break;
+                }
+            }
         }
     }
 
