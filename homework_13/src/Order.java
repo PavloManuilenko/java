@@ -14,7 +14,7 @@ public class Order {
 
     @Override
     public String toString() {
-        String toString = "Order number" + orderNumber + ", name of drink: " + nameOfDrink + ", count of item: " + countOfItem;
+        String toString = "Order number: " + orderNumber + ", name of drink: " + nameOfDrink + ", count of item: " + countOfItem;
         return toString;
     }
 

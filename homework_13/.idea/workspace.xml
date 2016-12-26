@@ -22,61 +22,56 @@
       <file leaf-file-name="Bar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="50" column="30" lean-forward="false" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+            <state relative-caret-position="-748">
+              <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
               <folding>
-                <element signature="e#2450#2451#0" expanded="true" />
-                <element signature="e#2482#2483#0" expanded="true" />
+                <element signature="e#2448#2449#0" expanded="true" />
+                <element signature="e#2480#2481#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BarTest.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BarTest.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BarTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="309" column="33" lean-forward="true" selection-start-line="309" selection-start-column="33" selection-end-line="309" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="394">
+              <caret line="477" column="0" lean-forward="false" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!block;n#should return string of empty bar#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#should return string of bar with one added waiter#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#should return string of bar with full staff of waiter even if try to hire more waiter than bar can hold#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#should add to storage all drinks fom menu#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#should refill storage for all drinks fom menu#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#try to add to storage more drinks than in menu#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#should take one order#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#should take max-possible orders#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#try to take more than max-possible orders#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#try to order more item of dink than bar has#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#try to order 0 item#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#try to order -1 item#0;n#!!block;n#BarTest#0" expanded="false" />
+                <element signature="n#!!block;n#should remove one added order from order list#0;n#!!block;n#BarTest#0" expanded="false" />
+                <marker date="1482419967291" expanded="false" signature="1665:2056" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="2174:2796" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="2884:3319" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="3412:4093" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="4196:4981" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="5070:5453" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="5543:6071" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="6147:6528" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="6618:7171" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="7230:7649" ph="{...}" />
+                <marker date="1482419967291" expanded="false" signature="8726:9246" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Drink.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Drink.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Waiter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Waiter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Barmen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Barmen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Barmen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="61" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="61" />
+            <state relative-caret-position="271">
+              <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -91,6 +86,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>j</find>
+    </findStrings>
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -102,11 +102,11 @@
         <option value="$PROJECT_DIR$/src/Waiters.java" />
         <option value="$PROJECT_DIR$/src/Drink.java" />
         <option value="$PROJECT_DIR$/src/Employee.java" />
-        <option value="$PROJECT_DIR$/src/Order.java" />
-        <option value="$PROJECT_DIR$/src/Barmen.java" />
         <option value="$PROJECT_DIR$/src/Waiter.java" />
         <option value="$PROJECT_DIR$/src/Bar.java" />
+        <option value="$PROJECT_DIR$/src/Order.java" />
         <option value="$PROJECT_DIR$/src/BarTest.groovy" />
+        <option value="$PROJECT_DIR$/src/Barmen.java" />
       </list>
     </option>
   </component>
@@ -179,15 +179,15 @@
       <recent name="spock.lang.Specification" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BarTest">
-    <configuration default="false" name="BarTest.should refill the drink which just added to storage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BarTest.should make count of item smaller if complete one order">
+    <configuration default="false" name="BarTest.should take one order" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_13" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BarTest" />
-      <option name="METHOD_NAME" value="should refill the drink which just added to storage" />
+      <option name="METHOD_NAME" value="should take one order" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -201,14 +201,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BarTest.should add to storage all drinks fom menu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BarTest.should complete one order" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_13" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BarTest" />
-      <option name="METHOD_NAME" value="should add to storage all drinks fom menu" />
+      <option name="METHOD_NAME" value="should complete one order" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -222,14 +222,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BarTest.try to add to storage more drinks than in menu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BarTest.should remove one added order from order list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_13" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BarTest" />
-      <option name="METHOD_NAME" value="try to add to storage more drinks than in menu" />
+      <option name="METHOD_NAME" value="should remove one added order from order list" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -243,14 +243,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BarTest.should refill storage for all drinks fom menu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BarTest.should make count of item smaller if complete one order" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_13" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BarTest" />
-      <option name="METHOD_NAME" value="should refill storage for all drinks fom menu" />
+      <option name="METHOD_NAME" value="should make count of item smaller if complete one order" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -264,15 +264,15 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BarTest.should complete all orders from max order list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_13" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BarTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="should complete all orders from max order list" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -490,19 +490,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BarTest.should refill the drink which just added to storage" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BarTest.should add to storage all drinks fom menu" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BarTest.try to add to storage more drinks than in menu" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BarTest.should refill storage for all drinks fom menu" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BarTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BarTest.should take one order" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BarTest.should complete one order" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BarTest.should remove one added order from order list" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BarTest.should make count of item smaller if complete one order" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BarTest.should complete all orders from max order list" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BarTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BarTest.should refill storage for all drinks fom menu" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BarTest.try to add to storage more drinks than in menu" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BarTest.should refill the drink which just added to storage" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BarTest.should add to storage all drinks fom menu" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BarTest.should make count of item smaller if complete one order" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BarTest.should complete all orders from max order list" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BarTest.should remove one added order from order list" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BarTest.should complete one order" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BarTest.should take one order" />
       </list>
     </recent_temporary>
   </component>
@@ -520,35 +520,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BarTest - 2016.12.21 at 19h 14m 28s.xml">
-      <configuration name="BarTest" configurationId="JUnit" />
+    <history-entry file="BarTest_should_complete_all_orders_from_max_order_list - 2016.12.22 at 17h 37m 34s.xml">
+      <configuration name="BarTest.should complete all orders from max order list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest - 2016.12.21 at 19h 16m 27s.xml">
-      <configuration name="BarTest" configurationId="JUnit" />
+    <history-entry file="BarTest_should_complete_all_orders_from_max_order_list - 2016.12.22 at 17h 37m 42s.xml">
+      <configuration name="BarTest.should complete all orders from max order list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest - 2016.12.21 at 19h 18m 28s.xml">
-      <configuration name="BarTest" configurationId="JUnit" />
+    <history-entry file="BarTest_should_complete_all_orders_from_max_order_list - 2016.12.22 at 17h 38m 07s.xml">
+      <configuration name="BarTest.should complete all orders from max order list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest - 2016.12.21 at 19h 21m 36s.xml">
-      <configuration name="BarTest" configurationId="JUnit" />
+    <history-entry file="BarTest_should_complete_all_orders_from_max_order_list - 2016.12.22 at 17h 38m 27s.xml">
+      <configuration name="BarTest.should complete all orders from max order list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest - 2016.12.21 at 19h 22m 52s.xml">
-      <configuration name="BarTest" configurationId="JUnit" />
+    <history-entry file="BarTest_should_complete_all_orders_from_max_order_list - 2016.12.22 at 17h 38m 36s.xml">
+      <configuration name="BarTest.should complete all orders from max order list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest_should_refill_storage_for_all_drinks_fom_menu - 2016.12.21 at 19h 21m 08s.xml">
-      <configuration name="BarTest.should refill storage for all drinks fom menu" configurationId="JUnit" />
+    <history-entry file="BarTest_should_complete_all_orders_from_max_order_list - 2016.12.22 at 17h 39m 06s.xml">
+      <configuration name="BarTest.should complete all orders from max order list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest_should_refill_the_drink_which_just_added_to_storage - 2016.12.21 at 19h 13m 59s.xml">
-      <configuration name="BarTest.should refill the drink which just added to storage" configurationId="JUnit" />
+    <history-entry file="BarTest_should_complete_all_orders_from_max_order_list - 2016.12.22 at 17h 39m 42s.xml">
+      <configuration name="BarTest.should complete all orders from max order list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest_should_refill_the_drink_which_just_added_to_storage - 2016.12.21 at 19h 19m 26s.xml">
-      <configuration name="BarTest.should refill the drink which just added to storage" configurationId="JUnit" />
+    <history-entry file="BarTest_should_complete_all_orders_from_max_order_list - 2016.12.22 at 17h 39m 52s.xml">
+      <configuration name="BarTest.should complete all orders from max order list" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest_try_to_add_to_storage_more_drinks_than_in_menu - 2016.12.21 at 19h 13m 53s.xml">
-      <configuration name="BarTest.try to add to storage more drinks than in menu" configurationId="JUnit" />
+    <history-entry file="BarTest_should_make_count_of_item_smaller_if_complete_one_order - 2016.12.22 at 17h 40m 36s.xml">
+      <configuration name="BarTest.should make count of item smaller if complete one order" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest_try_to_add_to_storage_more_drinks_than_in_menu - 2016.12.21 at 19h 20m 56s.xml">
-      <configuration name="BarTest.try to add to storage more drinks than in menu" configurationId="JUnit" />
+    <history-entry file="BarTest_should_make_count_of_item_smaller_if_complete_one_order - 2016.12.22 at 17h 41m 46s.xml">
+      <configuration name="BarTest.should make count of item smaller if complete one order" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -558,7 +558,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -592,43 +592,73 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Bar.java</url>
-          <line>40</line>
+          <url>file://$PROJECT_DIR$/src/Barmen.java</url>
+          <line>34</line>
           <properties />
-          <option name="timeStamp" value="38" />
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Bar.java</url>
-          <line>41</line>
+          <url>file://$PROJECT_DIR$/src/Barmen.java</url>
+          <line>35</line>
           <properties />
-          <option name="timeStamp" value="39" />
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Bar.java</url>
-          <line>42</line>
+          <url>file://$PROJECT_DIR$/src/Barmen.java</url>
+          <line>36</line>
           <properties />
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Bar.java</url>
+          <url>file://$PROJECT_DIR$/src/Barmen.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Barmen.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Barmen.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Barmen.java</url>
           <line>44</line>
           <properties />
-          <option name="timeStamp" value="41" />
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Bar.java</url>
+          <url>file://$PROJECT_DIR$/src/Barmen.java</url>
           <line>46</line>
           <properties />
-          <option name="timeStamp" value="42" />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Bar.java</url>
-          <line>49</line>
+          <url>file://$PROJECT_DIR$/src/BarTest.groovy</url>
+          <line>477</line>
           <properties />
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BarTest.groovy</url>
+          <line>479</line>
+          <properties />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BarTest.groovy</url>
+          <line>480</line>
+          <properties />
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="47" />
+      <option name="time" value="75" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -642,8 +672,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2450#2451#0" expanded="true" />
-            <element signature="e#2482#2483#0" expanded="true" />
+            <element signature="e#2448#2449#0" expanded="true" />
+            <element signature="e#2480#2481#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -712,10 +742,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/Drink.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Waiter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -728,45 +766,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Barmen.java">
+    <entry file="file://$PROJECT_DIR$/src/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="61" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Waiter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Drink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="128" lean-forward="false" selection-start-line="16" selection-start-column="128" selection-end-line="16" selection-end-column="128" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="50" column="30" lean-forward="false" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        <state relative-caret-position="-748">
+          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
           <folding>
-            <element signature="e#2450#2451#0" expanded="true" />
-            <element signature="e#2482#2483#0" expanded="true" />
+            <element signature="e#2448#2449#0" expanded="true" />
+            <element signature="e#2480#2481#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BarTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="309" column="33" lean-forward="true" selection-start-line="309" selection-start-column="33" selection-end-line="309" selection-end-column="33" />
+        <state relative-caret-position="394">
+          <caret line="477" column="0" lean-forward="false" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#should return string of empty bar#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one added waiter#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of waiter even if try to hire more waiter than bar can hold#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add to storage all drinks fom menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should refill storage for all drinks fom menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to add to storage more drinks than in menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should take one order#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should take max-possible orders#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to take more than max-possible orders#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order more item of dink than bar has#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order 0 item#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order -1 item#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should remove one added order from order list#0;n#!!block;n#BarTest#0" expanded="false" />
+            <marker date="1482419967291" expanded="false" signature="1665:2056" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="2174:2796" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="2884:3319" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="3412:4093" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="4196:4981" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="5070:5453" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="5543:6071" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="6147:6528" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="6618:7171" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="7230:7649" ph="{...}" />
+            <marker date="1482419967291" expanded="false" signature="8726:9246" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Barmen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
           <folding />
         </state>
       </provider>

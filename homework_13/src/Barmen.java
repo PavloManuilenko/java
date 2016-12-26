@@ -32,7 +32,7 @@ public class Barmen extends Employee {
     }
 
     public void completeOrder(int orderNumber, String nameOfDrink) {
-        for (int i = 0; i < (Bar.orders.length - Bar.volumeOfOrders); i++) {
+        for (int i = 0; i < Bar.orders.length; i++) {
             if ((Bar.orders[i].orderNumber == orderNumber) && (Bar.orders[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0)) {
                 for (int j = 0; j < Bar.drinks.length; j++) {
                     if (Bar.drinks[j].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) {
@@ -42,9 +42,9 @@ public class Barmen extends Employee {
                     }
                 }
                 for (int o = i; o < (Bar.orders.length - Bar.volumeOfOrders) - 1; o++) {
-                    Bar.orders[o] = Bar.orders[o + 1];
+                    Bar.orders[o] = Bar.orders[o+1];
                 }
-                Bar.orders[Bar.orders.length - 1] = null;
+                Bar.orders[Bar.orders.length - Bar.volumeOfOrders++] = null;
             }
         }
     }

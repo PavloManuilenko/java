@@ -23,8 +23,11 @@ public class Waiter extends Employee {
         if (Bar.volumeOfOrders <= 0) {
             return takeOrder = "Sorry, we can't accept a new order, please wait for a while.";
         }
+        else if (countOfItem <= 0) {
+            return takeOrder = "Sorry, but order like this is impossible to order.";
+        }
         else {
-            for (int i = 0; i < Bar.drinks.length; i++) {
+            for (int i = 0; i < (Bar.drinks.length - Bar.storageFreeSpace); i++) {
                 if (Bar.drinks[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) {
                     if (Bar.drinks[i].countOfItem >= countOfItem) {
                         Order newOrder = new Order((Bar.orders.length - Bar.volumeOfOrders + 1), Bar.drinks[i].nameOfDrink, countOfItem);

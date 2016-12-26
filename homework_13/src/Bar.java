@@ -29,11 +29,11 @@ public class Bar {
     Barmen[] barmen = new Barmen[10];
     Waiter[] waiters = new Waiter[20];
     static Drink[] drinks = new Drink[5];
-    static Order[] orders = new Order[30];
+    static Order[] orders = new Order[3];
     static int tips = 0;
     static int volumeOfOrders = orders.length;
+    static int storageFreeSpace = drinks.length;
     private int tipsForEach = 0;
-    private int storageFreeSpace = drinks.length;
     private int countOfBarmen = barmen.length;
     private int countOfWaiters = waiters.length;
 
