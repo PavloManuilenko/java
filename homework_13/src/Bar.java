@@ -23,6 +23,9 @@
 - Метод “уволить сотрудника” принимает имя и должность сотрудника. Убирает элемент выбранного сотрудника из правильного массива.
 
 - Для каждого класса переопределить методы equals(), hashCode() и toString().
+
+У бара должен быть метод getDrinkCount, который возвращает кол-во запасов по заданному названию напитка,
+в случае если напиток закончился или не существует необходимо возвращать значение -1.
 */
 public class Bar {
     String name = new String();
@@ -30,9 +33,9 @@ public class Bar {
     Waiter[] waiters = new Waiter[20];
     Drink[] drinks = new Drink[5];
     Order[] orders = new Order[30];
-    int volumeOfOrders = orders.length;
-    int storageFreeSpace = drinks.length;
-    int tips = 0;
+    protected int volumeOfOrders = orders.length;
+    private int storageFreeSpace = drinks.length;
+    private int tips = 0;
     private int tipsForEach = 0;
     private int countOfBarmen = barmen.length;
     private int countOfWaiters = waiters.length;
@@ -68,10 +71,10 @@ public class Bar {
 
     public void hireEmployee(String name, byte years, String position, Bar bar) {
         if (null != bar) {
-            if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters > 0)) {
+            if ((position.equalsIgnoreCase("waiter")) && (countOfWaiters > 0)) {
                 Waiter waiter = new Waiter(name, years, bar);
                 bar.waiters[waiters.length - countOfWaiters--] = waiter;
-            } else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen > 0)) {
+            } else if ((position.equalsIgnoreCase("barman")) && (countOfBarmen > 0)) {
                 Barmen barman = new Barmen(name, years, bar);
                 bar.barmen[barmen.length - countOfBarmen--] = barman;
             }
@@ -79,17 +82,17 @@ public class Bar {
     }
 
     public void fireEmployee(String name, String position) {
-        if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters != waiters.length)) {
+        if ((position.equalsIgnoreCase("waiter")) && (countOfWaiters != waiters.length)) {
             for (int i = (waiters.length - countOfWaiters) - 1; i >= 0; i--) {
-                if (name.compareToIgnoreCase(waiters[i].name) == 0) {
+                if (name.equalsIgnoreCase(waiters[i].name)) {
                     waiters[i] = null;
                     countOfWaiters++;
                     break;
                 }
             }
-        } else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen != barmen.length)) {
+        } else if ((position.equalsIgnoreCase("barman")) && (countOfBarmen != barmen.length)) {
             for (int i = (barmen.length - countOfBarmen) - 1; i >= 0; i--) {
-                if (name.compareToIgnoreCase(barmen[i].name) == 0) {
+                if (name.equalsIgnoreCase(barmen[i].name)) {
                     barmen[i] = null;
                     countOfBarmen++;
                     break;
@@ -105,7 +108,7 @@ public class Bar {
     public String makeOrder(String nameOfDrink, int countOfItem) {
         String makeOrder = "";
         for (int i = 0; i < (drinks.length - storageFreeSpace); i++) {
-            if (drinks[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) {
+            if (drinks[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) {
                 if (drinks[i].countOfItem >= countOfItem) {
                     Order newOrder = new Order((orders.length - volumeOfOrders + 1), drinks[i].nameOfDrink, countOfItem);
                     orders[orders.length - volumeOfOrders--] = newOrder;
@@ -118,7 +121,8 @@ public class Bar {
     public void doTheOrder(String nameOfDrink, int countOfItem) {
         for (int i = 0; i < orders.length; i++) {
             if (null == orders[i]) break;
-            if ((orders[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) && (orders[i].countOfItem == countOfItem)) {
+            if ((orders[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) && (orders[i].countOfItem == countOfItem)) {
+                orders[i].countOfItem -= countOfItem;
                 for (int j = i + 1; j < orders.length; j++) {
                     if (i == orders.length) {
                         orders[i] = null;
@@ -134,6 +138,15 @@ public class Bar {
             }
         }
 
+    }
+
+    public int getDrinkCount(String nameOfDrink) {
+        for (int i = 0; i < drinks.length; i++) {
+            if (null != drinks[i] && drinks[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) {
+                return drinks[i].countOfItem;
+            }
+        }
+        return -1;
     }
 
     @Override

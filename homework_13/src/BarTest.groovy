@@ -220,7 +220,7 @@ class BarTest extends spock.lang.Specification {
         def actual = bar.toString()
 
         then: "strings compare"
-        expected == actual
+        actual == expected
     }
 
     def "should add to storage all drinks fom menu"() {
@@ -455,8 +455,8 @@ class BarTest extends spock.lang.Specification {
         bar.waiters[0].takeOrder("Dark Beer", 1)
         bar.waiters[0].takeOrder("Dark Beer", 1)
         bar.barmen[0].completeOrder("Dark Beer", 1)
-        def expected = bar.orders.length - bar.volumeOfOrders
-        def actual = 1
+        def expected = 1
+        def actual = bar.orders.length - bar.volumeOfOrders
 
         then: "verify"
         actual == expected
@@ -558,7 +558,7 @@ class BarTest extends spock.lang.Specification {
         def actual = bar.tips
 
         then: "strings compare"
-        expected == actual
+        actual == expected
     }
 
     def "should return 0 tips if it was divided"() {
@@ -576,7 +576,7 @@ class BarTest extends spock.lang.Specification {
         def actual = bar.tips
 
         then: "strings compare"
-        expected == actual
+        actual == expected
     }
 
     def "should divide tips for all staff"() {
@@ -594,7 +594,7 @@ class BarTest extends spock.lang.Specification {
         def actual = bar.tipsForEach;
 
         then: "strings compare"
-        expected == actual
+        actual == expected
     }
 
     //max bar's kind of item toString
@@ -613,6 +613,73 @@ class BarTest extends spock.lang.Specification {
         def actual = bar.toString()
 
         then: "strings compare"
-        expected == actual
+        actual == expected
     }
+
+    //getDrinkCount
+    def "should return one drink's count"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        Drink beer = new Drink("Beer", 17)
+        bar.addToStorage(beer)
+
+        when: "creation of expecting string"
+        def expected = 17
+        def actual = bar.getDrinkCount("Beer")
+
+        then: "strings compare"
+        actual == expected
+    }
+
+    def "should return one of some drink's count"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        Drink beer = new Drink("Beer", 17)
+        Drink lager = new Drink("Lager", 25)
+        Drink wine = new Drink("Wine", 10)
+        bar.addToStorage(beer)
+        bar.addToStorage(lager)
+        bar.addToStorage(wine)
+
+        when: "creation of expecting string"
+        def expected = 25
+        def actual = bar.getDrinkCount("Lager")
+
+        then: "strings compare"
+        actual == expected
+    }
+
+    def "should return flag if drink is absent"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        Drink lager = new Drink("Lager", 25)
+        bar.addToStorage(lager)
+
+        when: "creation of expecting string"
+        def expected = -1
+        def actual = bar.getDrinkCount("Lage")
+
+        then: "strings compare"
+        actual == expected
+    }
+
+    def "should return flag if drink was finished"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
+        Drink lager = new Drink("Lager", 2)
+        bar.addToStorage(lager)
+
+        when: "creation of expecting"
+        bar.waiters[0].takeOrder("Lager", 1)
+        bar.barmen[0].completeOrder("Lager", 1)
+
+        def expected = -1
+        def actual = bar.getDrinkCount("Lager")
+
+        then: "strings compare"
+        actual == expected
+    }
+
 }
