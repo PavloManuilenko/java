@@ -31,20 +31,23 @@ public class Barmen extends Employee {
         this.bailiwickCocktail = bailiwickCocktail;
     }
 
-    public void completeOrder(int orderNumber, String nameOfDrink) {
+    public void completeOrder(String nameOfDrink, int countOfItem) {
         for (int i = 0; i < Bar.orders.length; i++) {
-            if ((Bar.orders[i].orderNumber == orderNumber) && (Bar.orders[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0)) {
-                for (int j = 0; j < Bar.drinks.length; j++) {
-                    if (Bar.drinks[j].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) {
-                        Bar.drinks[j].countOfItem -= Bar.orders[i].countOfItem;
+            if (null == Bar.orders[i]) break;
+
+            if ((Bar.orders[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) && (Bar.orders[i].countOfItem == countOfItem)) {
+                for (int j = i + 1; j < Bar.orders.length; j++) {
+                    if (i == Bar.orders.length) {
+                        Bar.orders[i] = null;
                         Bar.volumeOfOrders++;
                         break;
                     }
+
+                    Bar.orders[j - 1] = Bar.orders[j];
                 }
-                for (int o = i; o < (Bar.orders.length - Bar.volumeOfOrders) - 1; o++) {
-                    Bar.orders[o] = Bar.orders[o+1];
-                }
-                Bar.orders[Bar.orders.length - Bar.volumeOfOrders++] = null;
+                Bar.orders[Bar.orders.length - 1] = null;
+                Bar.volumeOfOrders++;
+                break;
             }
         }
     }

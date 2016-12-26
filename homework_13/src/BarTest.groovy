@@ -336,7 +336,7 @@ class BarTest extends spock.lang.Specification {
 
         when: "creation of expecting"
         bar.waiters[0].takeOrder("Dark Beer", 1)
-        def expected = "Order number1, name of drink: Dark Beer, count of item: 1"
+        def expected = "Order number: 1, name of drink: Dark Beer, count of item: 1"
         def actual = bar.orders[0].toString()
 
         then: "verify"
@@ -435,7 +435,7 @@ class BarTest extends spock.lang.Specification {
 
         when: "creation of expecting"
         bar.waiters[0].takeOrder("Dark Beer", 1)
-        bar.barmen[0].completeOrder(1, "Dark Beer")
+        bar.barmen[0].completeOrder("Dark Beer", 1)
         def expected = null
         def actual = bar.orders[0]
 
@@ -454,7 +454,7 @@ class BarTest extends spock.lang.Specification {
         when: "creation of expecting"
         bar.waiters[0].takeOrder("Dark Beer", 1)
         bar.waiters[0].takeOrder("Dark Beer", 1)
-        bar.barmen[0].completeOrder(1, "Dark Beer")
+        bar.barmen[0].completeOrder("Dark Beer", 1)
         def expected = bar.orders.length - bar.volumeOfOrders
         def actual = 1
 
@@ -475,19 +475,144 @@ class BarTest extends spock.lang.Specification {
             bar.waiters[0].takeOrder("Dark Beer", 1)
         }
         for (int i = 0; i < bar.orders.length; i++) {
-            bar.barmen[0].completeOrder(i + 1, "Dark Beer")
+            bar.barmen[0].completeOrder("Dark Beer", 1)
         }
         def expected = bar.orders.length - bar.volumeOfOrders
-        def actual = bar.orders.toString()//0
+        def actual = 0
 
         then: "verify"
         actual == expected
     }
 
-    //takeTips
+    def "should complete different orders (except one) from order list"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Pity", (byte)18, "waiter")
+        bar.hireEmployee("Rob", (byte)25, "barman")
 
-    //divideTips
+        Drink lager = new Drink("Lager", 90)
+        Drink darkBeer = new Drink("Dark Beer", 80)
+        Drink whiskey = new Drink("Whiskey", 70)
+        Drink rum = new Drink("Rum", 60)
+        Drink vodka = new Drink("Vodka", 50)
+
+        bar.addToStorage(lager)
+        bar.addToStorage(darkBeer)
+        bar.addToStorage(whiskey)
+        bar.addToStorage(rum)
+        bar.addToStorage(vodka)
+
+        when: "creation of expecting"
+        bar.waiters[0].takeOrder("Lager", 1)
+        bar.waiters[0].takeOrder("Dark Beer", 1)
+        bar.waiters[0].takeOrder("Whiskey", 1)
+        bar.waiters[0].takeOrder("Rum", 1)
+        bar.waiters[0].takeOrder("Vodka", 1)
+        bar.waiters[0].takeOrder("Lager", 1)
+        bar.waiters[0].takeOrder("Dark Beer", 1)
+        bar.waiters[0].takeOrder("Whiskey", 1)
+        bar.waiters[0].takeOrder("Rum", 1)
+        bar.waiters[0].takeOrder("Vodka", 1)
+
+        bar.barmen[0].completeOrder("Lager", 1)
+        bar.barmen[0].completeOrder("Dark Beer", 1)
+        bar.barmen[0].completeOrder("Whiskey", 1)
+        bar.barmen[0].completeOrder("Rum", 1)
+        bar.barmen[0].completeOrder("Vodka", 1)
+        bar.barmen[0].completeOrder("Dark Beer", 1)
+        bar.barmen[0].completeOrder("Whiskey", 1)
+        bar.barmen[0].completeOrder("Rum", 1)
+        bar.barmen[0].completeOrder("Vodka", 1)
+
+        def expected = bar.orders.length - bar.volumeOfOrders
+        def actual = 1
+
+        then: "verify"
+        actual == expected
+}
+
+    //takeTips & divideTips
+    def "should add tips to the Bar"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter")
+
+        when: "creation of expecting"
+        bar.waiters[0].takeTips(50)
+        def expected = 50
+        def actual = bar.tips
+
+        then: "strings compare"
+        actual == expected
+    }
+
+    def "should add sum to the Bar if take tips used"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter")
+
+        when: "creation of expecting"
+        bar.waiters[0].takeTips(50)
+        bar.waiters[0].takeTips(100)
+        def expected = 150
+        def actual = bar.tips
+
+        then: "strings compare"
+        expected == actual
+    }
+
+    def "should return 0 tips if it was divided"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter")
+        bar.hireEmployee("Tom", (byte)25, "waiter")
+        bar.hireEmployee("Peter", (byte)35, "barman")
+
+        when: "creation of expecting"
+        bar.waiters[0].takeTips(100)
+        bar.waiters[1].takeTips(100)
+        bar.divideTips()
+        def expected = 0
+        def actual = bar.tips
+
+        then: "strings compare"
+        expected == actual
+    }
+
+    def "should divide tips for all staff"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter")
+        bar.hireEmployee("Tom", (byte)25, "waiter")
+        bar.hireEmployee("Peter", (byte)35, "barman")
+
+        when: "creation of expecting"
+        bar.waiters[0].takeTips(150)
+        bar.waiters[1].takeTips(150)
+        bar.divideTips()
+        def expected = 300 / 3
+        def actual = bar.tipsForEach;
+
+        then: "strings compare"
+        expected == actual
+    }
 
     //max bar toString
+    def "should return string of complete bar"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Tom", (byte)25, "waiter")
+        bar.hireEmployee("Peter", (byte)35, "barman")
+        Drink beer = new Drink("Beer", 2)
+        bar.addToStorage(beer)
+        bar.waiters[0].takeOrder("Beer", 1)
+        bar.waiters[0].takeTips(50)
 
+        when: "creation of expecting"
+        def expected = "Bar: \"The Blue Oyster\"\nName: Peter, years old: 35, bailiwick cocktail: Beer\nName: Tom, years old: 25\nName of drink: Beer, count of item: 2\n\nTips: 50"
+        def actual = bar.toString()
+
+        then: "strings compare"
+        expected == actual
+    }
 }
