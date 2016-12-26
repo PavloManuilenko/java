@@ -9,21 +9,13 @@
 public class Barmen extends Employee {
     String bailiwickCocktail = new String();
 
-    public Barmen() {
-        name = "Barmen";
-        years = 25;
+    public Barmen(String name, byte years, Bar bar) {
+        super(name, years, bar);
         bailiwickCocktail = "Beer";
     }
 
-    public Barmen(String name, byte years) {
-        this.name = name;
-        this.years = years;
-        bailiwickCocktail = "Beer";
-    }
-
-    public Barmen(String name, byte years, String bailiwickCocktail) {
-        this.name = name;
-        this.years = years;
+    public Barmen(String name, byte years, Bar bar, String bailiwickCocktail) {
+        super(name, years, bar);
         this.bailiwickCocktail = bailiwickCocktail;
     }
 
@@ -32,21 +24,21 @@ public class Barmen extends Employee {
     }
 
     public void completeOrder(String nameOfDrink, int countOfItem) {
-        for (int i = 0; i < Bar.orders.length; i++) {
-            if (null == Bar.orders[i]) break;
+        for (int i = 0; i < bar.orders.length; i++) {
+            if (null == bar.orders[i]) break;
 
-            if ((Bar.orders[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) && (Bar.orders[i].countOfItem == countOfItem)) {
-                for (int j = i + 1; j < Bar.orders.length; j++) {
-                    if (i == Bar.orders.length) {
-                        Bar.orders[i] = null;
-                        Bar.volumeOfOrders++;
+            if ((bar.orders[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) && (bar.orders[i].countOfItem == countOfItem)) {
+                for (int j = i + 1; j < bar.orders.length; j++) {
+                    if (i == bar.orders.length) {
+                        bar.orders[i] = null;
+                        bar.volumeOfOrders++;
                         break;
                     }
 
-                    Bar.orders[j - 1] = Bar.orders[j];
+                    bar.orders[j - 1] = bar.orders[j];
                 }
-                Bar.orders[Bar.orders.length - 1] = null;
-                Bar.volumeOfOrders++;
+                bar.orders[bar.orders.length - 1] = null;
+                bar.volumeOfOrders++;
                 break;
             }
         }

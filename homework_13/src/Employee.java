@@ -6,6 +6,13 @@
 public class Employee {
     String name = new String();
     byte years;
+    Bar bar;
+
+    public Employee(String name, byte years, Bar bar) {
+        this.name = name;
+        this.years = years;
+        this.bar = bar;
+    }
 
     @Override
     public String toString() {

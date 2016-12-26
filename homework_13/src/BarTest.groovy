@@ -17,7 +17,7 @@ class BarTest extends spock.lang.Specification {
     def "should return string of bar with one added waiter"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Alex", (byte)30, "waiter")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
 
         when: "creation of expecting string"
         def expected = "Bar: \"The Blue Oyster\"\nName: Alex, years old: 30\n\nTips: 0"
@@ -31,9 +31,9 @@ class BarTest extends spock.lang.Specification {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
         for (int i = 0; i < 20; i++) {
-            bar.hireEmployee("Waiter", (byte)(30 + i), "waiter")
+            bar.hireEmployee("Waiter", (byte)(30 + i), "waiter", bar)
         }
-        bar.hireEmployee("WaiterOver", (byte)50, "waiter")
+        bar.hireEmployee("WaiterOver", (byte)50, "waiter", bar)
 
         when: "creation of expecting string"
         def expected = "Bar: \"The Blue Oyster\""
@@ -51,7 +51,7 @@ class BarTest extends spock.lang.Specification {
     def "should return string of bar with one added barman + default bailiwick cocktail"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Bob", (byte)40, "Barman")
+        bar.hireEmployee("Bob", (byte)40, "Barman", bar)
 
         when: "creation of expecting string"
         def expected = "Bar: \"The Blue Oyster\"\nName: Bob, years old: 40, bailiwick cocktail: Beer\n\nTips: 0"
@@ -65,9 +65,9 @@ class BarTest extends spock.lang.Specification {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
         for (int i = 0; i < 10; i++) {
-            bar.hireEmployee("Barman", (byte)(35 + i), "barman")
+            bar.hireEmployee("Barman", (byte)(35 + i), "barman", bar)
         }
-        bar.hireEmployee("BarmanOver", (byte)45, "barman")
+        bar.hireEmployee("BarmanOver", (byte)45, "barman", bar)
 
         when: "creation of expecting string"
         def expected = "Bar: \"The Blue Oyster\""
@@ -84,7 +84,7 @@ class BarTest extends spock.lang.Specification {
     def "should return string of bar with one added barman with bailiwick cocktail"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Tom", (byte)22, "Barman")
+        bar.hireEmployee("Tom", (byte)22, "Barman", bar)
         bar.setBailiwickCocktail("B-52", 0)
 
         when: "creation of expecting string"
@@ -99,10 +99,10 @@ class BarTest extends spock.lang.Specification {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
         for (int i = 0; i < 10; i++) {
-            bar.hireEmployee("Barman", (byte)(35 + i), "barman")
+            bar.hireEmployee("Barman", (byte)(35 + i), "barman", bar)
             bar.setBailiwickCocktail("B-5" + i, i)
         }
-        bar.hireEmployee("BarmanOver", (byte)45, "barman")
+        bar.hireEmployee("BarmanOver", (byte)45, "barman", bar)
 
         when: "creation of expecting string"
         def expected = "Bar: \"The Blue Oyster\""
@@ -122,10 +122,10 @@ class BarTest extends spock.lang.Specification {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
         for (int i = 0; i < 20; i++) {
-            bar.hireEmployee("Waiter", (byte)(30 + i), "waiter")
+            bar.hireEmployee("Waiter", (byte)(30 + i), "waiter", bar)
         }
         for (int i = 0; i < 10; i++) {
-            bar.hireEmployee("Barman", (byte)(35 + i), "barman")
+            bar.hireEmployee("Barman", (byte)(35 + i), "barman", bar)
         }
 
         when: "creation of expecting string"
@@ -147,7 +147,7 @@ class BarTest extends spock.lang.Specification {
     def "should return only string of bar if fired one existing waiter"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Alex", (byte)30, "waiter")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
         bar.fireEmployee("Alex", "waiter")
 
         when: "creation of expecting string"
@@ -162,7 +162,7 @@ class BarTest extends spock.lang.Specification {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
         for (int i = 0; i < 20; i++) {
-            bar.hireEmployee("Waiter", (byte)(30 + i), "waiter")
+            bar.hireEmployee("Waiter", (byte)(30 + i), "waiter", bar)
         }
         for (int i = 0; i < 19; i++) {
             bar.fireEmployee("Waiter", "waiter")
@@ -179,7 +179,7 @@ class BarTest extends spock.lang.Specification {
     def "should return only string of bar if fired one existing barman"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Tom", (byte)30, "barman")
+        bar.hireEmployee("Tom", (byte)30, "barman", bar)
         bar.fireEmployee("Tom", "barman")
 
         when: "creation of expecting string"
@@ -194,7 +194,7 @@ class BarTest extends spock.lang.Specification {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
         for (int i = 0; i < 10; i++) {
-            bar.hireEmployee("Barman", (byte)(30 + i), "barman")
+            bar.hireEmployee("Barman", (byte)(30 + i), "barman", bar)
         }
         for (int i = 0; i < 9; i++) {
             bar.fireEmployee("Barman", "barman")
@@ -330,7 +330,7 @@ class BarTest extends spock.lang.Specification {
     def "should take one order"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         Drink darkBeer = new Drink("Dark Beer", 1)
         bar.addToStorage(darkBeer)
 
@@ -346,7 +346,7 @@ class BarTest extends spock.lang.Specification {
     def "should take max-possible orders"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         Drink darkBeer = new Drink("Dark Beer", 1)
         bar.addToStorage(darkBeer)
 
@@ -364,7 +364,7 @@ class BarTest extends spock.lang.Specification {
     def "try to take more than max-possible orders"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         Drink darkBeer = new Drink("Dark Beer", 1)
         bar.addToStorage(darkBeer)
 
@@ -382,7 +382,7 @@ class BarTest extends spock.lang.Specification {
     def "try to order more item of dink than bar has"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         Drink darkBeer = new Drink("Dark Beer", 1)
         bar.addToStorage(darkBeer)
 
@@ -397,7 +397,7 @@ class BarTest extends spock.lang.Specification {
     def "try to order 0 item"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         Drink darkBeer = new Drink("Dark Beer", 1)
         bar.addToStorage(darkBeer)
 
@@ -412,7 +412,7 @@ class BarTest extends spock.lang.Specification {
     def "try to order -1 item"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         Drink darkBeer = new Drink("Dark Beer", 1)
         bar.addToStorage(darkBeer)
 
@@ -428,8 +428,8 @@ class BarTest extends spock.lang.Specification {
     def "should remove one added order from order list"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
-        bar.hireEmployee("Rob", (byte)25, "barman")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
         Drink darkBeer = new Drink("Dark Beer", 1)
         bar.addToStorage(darkBeer)
 
@@ -446,8 +446,8 @@ class BarTest extends spock.lang.Specification {
     def "should make count of item smaller if complete one order"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
-        bar.hireEmployee("Rob", (byte)25, "barman")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
         Drink darkBeer = new Drink("Dark Beer", 2)
         bar.addToStorage(darkBeer)
 
@@ -465,8 +465,8 @@ class BarTest extends spock.lang.Specification {
     def "should complete all orders from max order list"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
-        bar.hireEmployee("Rob", (byte)25, "barman")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
         Drink darkBeer = new Drink("Dark Beer", 30)
         bar.addToStorage(darkBeer)
 
@@ -487,8 +487,8 @@ class BarTest extends spock.lang.Specification {
     def "should complete different orders (except one) from order list"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Pity", (byte)18, "waiter")
-        bar.hireEmployee("Rob", (byte)25, "barman")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
 
         Drink lager = new Drink("Lager", 90)
         Drink darkBeer = new Drink("Dark Beer", 80)
@@ -535,7 +535,7 @@ class BarTest extends spock.lang.Specification {
     def "should add tips to the Bar"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Alex", (byte)30, "waiter")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
 
         when: "creation of expecting"
         bar.waiters[0].takeTips(50)
@@ -549,7 +549,7 @@ class BarTest extends spock.lang.Specification {
     def "should add sum to the Bar if take tips used"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Alex", (byte)30, "waiter")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
 
         when: "creation of expecting"
         bar.waiters[0].takeTips(50)
@@ -564,9 +564,9 @@ class BarTest extends spock.lang.Specification {
     def "should return 0 tips if it was divided"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Alex", (byte)30, "waiter")
-        bar.hireEmployee("Tom", (byte)25, "waiter")
-        bar.hireEmployee("Peter", (byte)35, "barman")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
+        bar.hireEmployee("Tom", (byte)25, "waiter", bar)
+        bar.hireEmployee("Peter", (byte)35, "barman", bar)
 
         when: "creation of expecting"
         bar.waiters[0].takeTips(100)
@@ -582,9 +582,9 @@ class BarTest extends spock.lang.Specification {
     def "should divide tips for all staff"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Alex", (byte)30, "waiter")
-        bar.hireEmployee("Tom", (byte)25, "waiter")
-        bar.hireEmployee("Peter", (byte)35, "barman")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
+        bar.hireEmployee("Tom", (byte)25, "waiter", bar)
+        bar.hireEmployee("Peter", (byte)35, "barman", bar)
 
         when: "creation of expecting"
         bar.waiters[0].takeTips(150)
@@ -601,8 +601,8 @@ class BarTest extends spock.lang.Specification {
     def "should return string of complete bar"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
-        bar.hireEmployee("Tom", (byte)25, "waiter")
-        bar.hireEmployee("Peter", (byte)35, "barman")
+        bar.hireEmployee("Tom", (byte)25, "waiter", bar)
+        bar.hireEmployee("Peter", (byte)35, "barman", bar)
         Drink beer = new Drink("Beer", 2)
         bar.addToStorage(beer)
         bar.waiters[0].takeOrder("Beer", 1)

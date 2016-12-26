@@ -8,30 +8,24 @@
 */
 public class Waiter extends Employee {
 
-    public Waiter() {
-        name = "Waiter";
-        years = 25;
-    }
-
-    public Waiter(String name, byte years) {
-        this.name = name;
-        this.years = years;
+    public Waiter(String name, byte years, Bar bar) {
+        super(name, years, bar);
     }
 
     public String takeOrder(String nameOfDrink, int countOfItem) {
         String takeOrder = new String();
-        if (Bar.volumeOfOrders <= 0) {
+        if (bar.volumeOfOrders <= 0) {
             return takeOrder = "Sorry, we can't accept a new order, please wait for a while.";
         }
         else if (countOfItem <= 0) {
             return takeOrder = "Sorry, but order like this is impossible to order.";
         }
         else {
-            for (int i = 0; i < (Bar.drinks.length - Bar.storageFreeSpace); i++) {
-                if (Bar.drinks[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) {
-                    if (Bar.drinks[i].countOfItem >= countOfItem) {
-                        Order newOrder = new Order((Bar.orders.length - Bar.volumeOfOrders + 1), Bar.drinks[i].nameOfDrink, countOfItem);
-                        Bar.orders[Bar.orders.length - Bar.volumeOfOrders--] = newOrder;
+            for (int i = 0; i < (bar.drinks.length - bar.storageFreeSpace); i++) {
+                if (bar.drinks[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) {
+                    if (bar.drinks[i].countOfItem >= countOfItem) {
+                        Order newOrder = new Order((bar.orders.length - bar.volumeOfOrders + 1), bar.drinks[i].nameOfDrink, countOfItem);
+                        bar.orders[bar.orders.length - bar.volumeOfOrders--] = newOrder;
                     }
                     else return takeOrder = "Sorry, we don't have enough drinks kind like this.";
                 }
@@ -41,7 +35,7 @@ public class Waiter extends Employee {
     }
 
     public void takeTips (int tips) {
-        Bar.tips += tips;
+        bar.addTips(tips);
     }
 
     @Override

@@ -28,11 +28,11 @@ public class Bar {
     String name = new String();
     Barmen[] barmen = new Barmen[10];
     Waiter[] waiters = new Waiter[20];
-    static Drink[] drinks = new Drink[5];
-    static Order[] orders = new Order[30];
-    static int tips = 0;
-    static int volumeOfOrders = orders.length;
-    static int storageFreeSpace = drinks.length;
+    Drink[] drinks = new Drink[5];
+    Order[] orders = new Order[30];
+    int volumeOfOrders = orders.length;
+    int storageFreeSpace = drinks.length;
+    int tips = 0;
     private int tipsForEach = 0;
     private int countOfBarmen = barmen.length;
     private int countOfWaiters = waiters.length;
@@ -58,19 +58,24 @@ public class Bar {
         this.name = name;
     }
 
+    void addTips(int tips) {
+        this.tips += tips;
+    }
     public void divideTips() {
         tipsForEach += tips / ((barmen.length - countOfBarmen) + (waiters.length - countOfWaiters));
         tips = 0;
     }
 
-    public void hireEmployee(String name, byte years, String position) {
-        if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters > 0) ) {
-            Waiter waiter = new Waiter(name, years);
-            waiters[waiters.length - countOfWaiters--] = waiter;
-        }
-        else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen > 0) ) {
-            Barmen barman = new Barmen(name, years);
-            barmen[barmen.length - countOfBarmen--] = barman;
+    public void hireEmployee(String name, byte years, String position, Bar bar) {
+        if (null != bar) {
+            if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters > 0) ) {
+                Waiter waiter = new Waiter(name, years, bar);
+                bar.waiters[waiters.length - countOfWaiters--] = waiter;
+            }
+            else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen > 0) ) {
+                Barmen barman = new Barmen(name, years, bar);
+                bar.barmen[barmen.length - countOfBarmen--] = barman;
+            }
         }
     }
 
