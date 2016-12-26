@@ -45,11 +45,10 @@ public class Bar {
                         drinks[i].countOfItem += drink.countOfItem;
                         break;
                     }
+                } else if (storageFreeSpace > 0) {
+                    drinks[drinks.length - storageFreeSpace--] = drink;
+                    break;
                 }
-                else if (storageFreeSpace > 0) {
-                        drinks[drinks.length - storageFreeSpace--] = drink;
-                        break;
-                    }
             }
         }
     }
@@ -61,6 +60,7 @@ public class Bar {
     void addTips(int tips) {
         this.tips += tips;
     }
+
     public void divideTips() {
         tipsForEach += tips / ((barmen.length - countOfBarmen) + (waiters.length - countOfWaiters));
         tips = 0;
@@ -68,11 +68,10 @@ public class Bar {
 
     public void hireEmployee(String name, byte years, String position, Bar bar) {
         if (null != bar) {
-            if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters > 0) ) {
+            if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters > 0)) {
                 Waiter waiter = new Waiter(name, years, bar);
                 bar.waiters[waiters.length - countOfWaiters--] = waiter;
-            }
-            else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen > 0) ) {
+            } else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen > 0)) {
                 Barmen barman = new Barmen(name, years, bar);
                 bar.barmen[barmen.length - countOfBarmen--] = barman;
             }
@@ -80,7 +79,7 @@ public class Bar {
     }
 
     public void fireEmployee(String name, String position) {
-        if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters != waiters.length) ) {
+        if ((position.compareToIgnoreCase("waiter") == 0) && (countOfWaiters != waiters.length)) {
             for (int i = (waiters.length - countOfWaiters) - 1; i >= 0; i--) {
                 if (name.compareToIgnoreCase(waiters[i].name) == 0) {
                     waiters[i] = null;
@@ -88,8 +87,7 @@ public class Bar {
                     break;
                 }
             }
-        }
-        else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen != barmen.length) ) {
+        } else if ((position.compareToIgnoreCase("barman") == 0) && (countOfBarmen != barmen.length)) {
             for (int i = (barmen.length - countOfBarmen) - 1; i >= 0; i--) {
                 if (name.compareToIgnoreCase(barmen[i].name) == 0) {
                     barmen[i] = null;
@@ -102,6 +100,40 @@ public class Bar {
 
     public void setBailiwickCocktail(String bailiwickCocktail, int index) {
         barmen[index].bailiwickCocktail = bailiwickCocktail;
+    }
+
+    public String makeOrder(String nameOfDrink, int countOfItem) {
+        String makeOrder = "";
+        for (int i = 0; i < (drinks.length - storageFreeSpace); i++) {
+            if (drinks[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) {
+                if (drinks[i].countOfItem >= countOfItem) {
+                    Order newOrder = new Order((orders.length - volumeOfOrders + 1), drinks[i].nameOfDrink, countOfItem);
+                    orders[orders.length - volumeOfOrders--] = newOrder;
+                } else return makeOrder = "Sorry, we don't have enough drinks kind like this.";
+            }
+        }
+        return makeOrder;
+    }
+
+    public void doTheOrder(String nameOfDrink, int countOfItem) {
+        for (int i = 0; i < orders.length; i++) {
+            if (null == orders[i]) break;
+            if ((orders[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) && (orders[i].countOfItem == countOfItem)) {
+                for (int j = i + 1; j < orders.length; j++) {
+                    if (i == orders.length) {
+                        orders[i] = null;
+                        volumeOfOrders++;
+                        break;
+                    }
+
+                    orders[j - 1] = orders[j];
+                }
+                orders[orders.length - 1] = null;
+                volumeOfOrders++;
+                break;
+            }
+        }
+
     }
 
     @Override
@@ -126,7 +158,7 @@ public class Bar {
         if (null == obj) return false;
         if (this == obj) return true;
         if (obj instanceof Bar) {
-            Bar bar = (Bar)obj;
+            Bar bar = (Bar) obj;
             if (this.name != null && bar.name != null) {
                 boolean equals = bar.name.equals(((Bar) obj).name);
                 if (equals) {

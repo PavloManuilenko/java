@@ -16,25 +16,15 @@ public class Waiter extends Employee {
         String takeOrder = new String();
         if (bar.volumeOfOrders <= 0) {
             return takeOrder = "Sorry, we can't accept a new order, please wait for a while.";
-        }
-        else if (countOfItem <= 0) {
+        } else if (countOfItem <= 0) {
             return takeOrder = "Sorry, but order like this is impossible to order.";
-        }
-        else {
-            for (int i = 0; i < (bar.drinks.length - bar.storageFreeSpace); i++) {
-                if (bar.drinks[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) {
-                    if (bar.drinks[i].countOfItem >= countOfItem) {
-                        Order newOrder = new Order((bar.orders.length - bar.volumeOfOrders + 1), bar.drinks[i].nameOfDrink, countOfItem);
-                        bar.orders[bar.orders.length - bar.volumeOfOrders--] = newOrder;
-                    }
-                    else return takeOrder = "Sorry, we don't have enough drinks kind like this.";
-                }
-            }
+        } else {
+            takeOrder = bar.makeOrder(nameOfDrink, countOfItem);
         }
         return takeOrder;
     }
 
-    public void takeTips (int tips) {
+    public void takeTips(int tips) {
         bar.addTips(tips);
     }
 
@@ -45,7 +35,7 @@ public class Waiter extends Employee {
     }
 
     @Override
-    public boolean equals (Object obj) {
+    public boolean equals(Object obj) {
         if (null == obj) return false;
         if (this == obj) return true;
         if (obj instanceof Waiter) {

@@ -524,8 +524,8 @@ class BarTest extends spock.lang.Specification {
         bar.barmen[0].completeOrder("Rum", 1)
         bar.barmen[0].completeOrder("Vodka", 1)
 
-        def expected = bar.orders.length - bar.volumeOfOrders
-        def actual = 1
+        def expected = 1
+        def actual = bar.orders.length - bar.volumeOfOrders
 
         then: "verify"
         actual == expected
@@ -597,7 +597,7 @@ class BarTest extends spock.lang.Specification {
         expected == actual
     }
 
-    //max bar toString
+    //max bar's kind of item toString
     def "should return string of complete bar"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")

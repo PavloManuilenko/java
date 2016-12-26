@@ -24,24 +24,7 @@ public class Barmen extends Employee {
     }
 
     public void completeOrder(String nameOfDrink, int countOfItem) {
-        for (int i = 0; i < bar.orders.length; i++) {
-            if (null == bar.orders[i]) break;
-
-            if ((bar.orders[i].nameOfDrink.compareToIgnoreCase(nameOfDrink) == 0) && (bar.orders[i].countOfItem == countOfItem)) {
-                for (int j = i + 1; j < bar.orders.length; j++) {
-                    if (i == bar.orders.length) {
-                        bar.orders[i] = null;
-                        bar.volumeOfOrders++;
-                        break;
-                    }
-
-                    bar.orders[j - 1] = bar.orders[j];
-                }
-                bar.orders[bar.orders.length - 1] = null;
-                bar.volumeOfOrders++;
-                break;
-            }
-        }
+        bar.doTheOrder(nameOfDrink, countOfItem);
     }
 
     @Override
@@ -51,16 +34,16 @@ public class Barmen extends Employee {
     }
 
     @Override
-    public boolean equals (Object obj) {
+    public boolean equals(Object obj) {
         if (null == obj) return false;
         if (this == obj) return true;
         if (obj instanceof Waiter) {
-            Barmen barmen = (Barmen)obj;
+            Barmen barmen = (Barmen) obj;
             if (this.name != null && barmen.name != null) {
                 boolean equals = barmen.name.equals(((Barmen) obj).name);
                 if (equals) {
                     equals = barmen.years == ((Barmen) obj).years;
-                    if (equals){
+                    if (equals) {
                         return barmen.bailiwickCocktail.equals(((Barmen) obj).bailiwickCocktail);
                     }
                 }
