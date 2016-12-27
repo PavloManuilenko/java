@@ -455,8 +455,8 @@ class BarTest extends spock.lang.Specification {
         bar.waiters[0].takeOrder("Dark Beer", 1)
         bar.waiters[0].takeOrder("Dark Beer", 1)
         bar.barmen[0].completeOrder("Dark Beer", 1)
-        def expected = 1
-        def actual = bar.orders.length - bar.volumeOfOrders
+        def expected = "Name of drink: Dark Beer, count of item: 1"
+        def actual = bar.drinks[0].toString()
 
         then: "verify"
         actual == expected
@@ -490,11 +490,11 @@ class BarTest extends spock.lang.Specification {
         bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         bar.hireEmployee("Rob", (byte)25, "barman", bar)
 
-        Drink lager = new Drink("Lager", 90)
-        Drink darkBeer = new Drink("Dark Beer", 80)
-        Drink whiskey = new Drink("Whiskey", 70)
-        Drink rum = new Drink("Rum", 60)
-        Drink vodka = new Drink("Vodka", 50)
+        Drink lager = new Drink("Lager", 2)
+        Drink darkBeer = new Drink("Dark Beer", 2)
+        Drink whiskey = new Drink("Whiskey", 2)
+        Drink rum = new Drink("Rum", 2)
+        Drink vodka = new Drink("Vodka", 2)
 
         bar.addToStorage(lager)
         bar.addToStorage(darkBeer)
@@ -668,7 +668,7 @@ class BarTest extends spock.lang.Specification {
         Bar bar = new Bar("The Blue Oyster")
         bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         bar.hireEmployee("Rob", (byte)25, "barman", bar)
-        Drink lager = new Drink("Lager", 2)
+        Drink lager = new Drink("Lager", 1)
         bar.addToStorage(lager)
 
         when: "creation of expecting"

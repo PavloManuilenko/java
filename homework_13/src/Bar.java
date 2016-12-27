@@ -122,9 +122,16 @@ public class Bar {
         for (int i = 0; i < orders.length; i++) {
             if (null == orders[i]) break;
             if ((orders[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) && (orders[i].countOfItem == countOfItem)) {
-                orders[i].countOfItem -= countOfItem;
+
+                for (int y = 0; y < drinks.length; y++) {
+                    if (orders[i].nameOfDrink.equalsIgnoreCase(drinks[y].nameOfDrink)) {
+                        drinks[y].countOfItem -= countOfItem;
+                        break;
+                    }
+                }
+
                 for (int j = i + 1; j < orders.length; j++) {
-                    if (i == orders.length) {
+                    if (i == orders.length-1) {
                         orders[i] = null;
                         volumeOfOrders++;
                         break;
@@ -143,7 +150,8 @@ public class Bar {
     public int getDrinkCount(String nameOfDrink) {
         for (int i = 0; i < drinks.length; i++) {
             if (null != drinks[i] && drinks[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) {
-                return drinks[i].countOfItem;
+                if (drinks[i].countOfItem == 0)  return -1;
+                else return drinks[i].countOfItem;
             }
         }
         return -1;
