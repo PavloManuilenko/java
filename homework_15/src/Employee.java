@@ -7,7 +7,8 @@ public class Employee {
     byte years;
     Bar bar;
 
-    public Employee(String name, byte years, Bar bar) {
+    public Employee(String name, byte years, Bar bar) throws NotExistBarException {
+        if (null == bar) throw new NotExistBarException("For creating new employee was passed not.");
         this.name = name;
         this.years = years;
         this.bar = bar;

@@ -8,12 +8,12 @@
 public class Barman extends Employee {
     String bailiwickCocktail = new String();
 
-    public Barman(String name, byte years, Bar bar) {
+    public Barman(String name, byte years, Bar bar) throws NotExistBarException {
         super(name, years, bar);
         bailiwickCocktail = "Beer";
     }
 
-    public Barman(String name, byte years, Bar bar, String bailiwickCocktail) {
+    public Barman(String name, byte years, Bar bar, String bailiwickCocktail) throws NotExistBarException {
         super(name, years, bar);
         this.bailiwickCocktail = bailiwickCocktail;
     }

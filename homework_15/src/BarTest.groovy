@@ -716,4 +716,14 @@ class BarTest extends spock.lang.Specification {
         then: "strings compare"
         actual == expected
     }
+
+    //NotExistBarException
+    def "exception if bar not exist"() {
+        when: "null == bar"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter", null)
+
+        then:
+        throw NotExistBarException;
+    }
 }

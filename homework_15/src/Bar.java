@@ -41,7 +41,7 @@ public class Bar {
         this.name = name;
     }
 
-    public void hireEmployee(String name, byte years, String position, Bar bar) {
+    public void hireEmployee(String name, byte years, String position, Bar bar) throws NotExistBarException {
         if (null != bar) {
             if ((position.equalsIgnoreCase("waiter")) && (countOfWaiters > 0)) {
                 Waiter waiter = new Waiter(name, years, bar);
