@@ -1,6 +1,8 @@
 /*
 Количество напитков, каждого вида (массив объектов. не более 5 элементов, для примера. Каждый элемент - это напиток.
 Свойства этого элемента - название, количество единиц этого напитка. Единицы измерения можно сделать какими угодно - литры, килограммы, бутылки)
+
+Необходимо расширить свойства напитка, таким образом, чтобы у него было название, объем, количество и стоимость.
 */
 public class Drink {
     String nameOfDrink;
@@ -20,9 +22,14 @@ public class Drink {
         this.price = price;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
         String toString = "Name of drink: " + nameOfDrink + ", count of item: " + countOfItem;
+        if (volume > 0 && price > 0) toString += ", volume: " + volume + ", price: " + price;
         return toString;
     }
 

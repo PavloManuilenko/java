@@ -90,17 +90,16 @@ public class Bar {
         }
     }
 
-    public String makeOrder(String nameOfDrink, int countOfItem) {
-        String makeOrder = "";
+    public void makeOrder(String nameOfDrink, int countOfItem) throws OrderDrinkOverException {
         for (int i = 0; i < (drinks.length - storageFreeSpace); i++) {
             if (drinks[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) {
                 if (drinks[i].countOfItem >= countOfItem) {
                     Order newOrder = new Order((orders.length - volumeOfOrders + 1), drinks[i].nameOfDrink, countOfItem);
                     orders[orders.length - volumeOfOrders--] = newOrder;
-                } else return makeOrder = "Sorry, we don't have enough drinks kind like this.";
+                } else throw new OrderDrinkOverException("Not correct value for order: " +
+                        (orders.length - volumeOfOrders + 1) + ". Requested drink: " + nameOfDrink + " is over.");
             }
         }
-        return makeOrder;
     }
 
     public void doTheOrder(String nameOfDrink, int countOfItem) {
@@ -132,8 +131,9 @@ public class Bar {
 
     }
 
-    void addTips(int tips) {
-        this.tips += tips;
+    void addTips(int tips) throws NegativeTipsException {
+        if (tips <= 0) throw new NegativeTipsException("Tips couldn't be negative. Passed value is: " + tips);
+        else this.tips += tips;
     }
 
     public void divideTips() {
@@ -162,6 +162,17 @@ public class Bar {
             }
         }
         return null;
+    }
+
+    public int lookingForDrink(String nameOfDrink) {
+        for (int i = 0; i < drinks.length; i++) {
+            if (null != drinks[i]) {
+                if (drinks[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) {
+                    return i;
+                }
+            }
+        }
+        return -1;
     }
 
     @Override
