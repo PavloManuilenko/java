@@ -51,6 +51,7 @@ public class Bar {
                 bar.barmen[barmen.length - countOfBarmen--] = barman;
             }
         }
+        else throw new NotExistBarException("For creating new employee was passed not.");
     }
 
     public void fireEmployee(String name, String position) {

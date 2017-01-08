@@ -7,7 +7,7 @@
 */
 public class Waiter extends Employee {
 
-    public Waiter(String name, byte years, Bar bar) throws NotExistBarException {
+    public Waiter(String name, byte years, Bar bar) {
         super(name, years, bar);
     }
 
