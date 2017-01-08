@@ -459,6 +459,78 @@ class BarTest extends spock.lang.Specification {
         actual == expected
     }
 
+    def "should delete drink if it was finished"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
+        Drink darkBeer = new Drink("Dark Beer", 1)
+        bar.addToStorage(darkBeer)
+
+        when: "creation of expecting"
+        bar.waiters[0].takeOrder("Dark Beer", 1)
+        bar.barmen[0].completeOrder("Dark Beer", 1)
+        def expected = null
+        def actual = bar.drinks[0]
+
+        then: "verify"
+        actual == expected
+    }
+
+    def "should delete one (first) drink if it was finished from full storage"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
+        Drink Beer1 = new Drink("Beer1", 1)
+        Drink Beer2 = new Drink("Beer2", 1)
+        Drink Beer3 = new Drink("Beer3", 1)
+        Drink Beer4 = new Drink("Beer4", 1)
+        Drink Beer5 = new Drink("Beer5", 1)
+        bar.addToStorage(Beer1)
+        bar.addToStorage(Beer2)
+        bar.addToStorage(Beer3)
+        bar.addToStorage(Beer4)
+        bar.addToStorage(Beer5)
+
+        when: "creation of expecting"
+        bar.waiters[0].takeOrder("Beer1", 1)
+        bar.barmen[0].completeOrder("Beer1", 1)
+        def expected = "[Name of drink: Beer2, count of item: 1, Name of drink: Beer3, count of item: 1," +
+                " Name of drink: Beer4, count of item: 1, Name of drink: Beer5, count of item: 1, null]"
+        def actual = bar.drinks.toString();
+
+        then: "verify"
+        actual == expected
+    }
+
+    def "should delete one (last) drink if it was finished from full storage"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
+        Drink Beer1 = new Drink("Beer1", 1)
+        Drink Beer2 = new Drink("Beer2", 1)
+        Drink Beer3 = new Drink("Beer3", 1)
+        Drink Beer4 = new Drink("Beer4", 1)
+        Drink Beer5 = new Drink("Beer5", 1)
+        bar.addToStorage(Beer1)
+        bar.addToStorage(Beer2)
+        bar.addToStorage(Beer3)
+        bar.addToStorage(Beer4)
+        bar.addToStorage(Beer5)
+
+        when: "creation of expecting"
+        bar.waiters[0].takeOrder("Beer5", 1)
+        bar.barmen[0].completeOrder("Beer5", 1)
+        def expected = "[Name of drink: Beer1, count of item: 1, Name of drink: Beer2, count of item: 1," +
+                " Name of drink: Beer3, count of item: 1, Name of drink: Beer4, count of item: 1, null]"
+        def actual = bar.drinks.toString();
+
+        then: "verify"
+        actual == expected
+    }
+
     def "should complete all orders from max order list"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
@@ -521,6 +593,7 @@ class BarTest extends spock.lang.Specification {
         then: "verify"
         actual == expected
     }
+
     //takeTips & divideTips
     def "should add tips to the Bar"() {
         given: "bar initialize"

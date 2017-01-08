@@ -23,6 +23,9 @@
 в случае если напиток закончился или не существует необходимо возвращать значение -1.
 У бара необходимо объявить метод getDrinkByName, который вернет объект напитка.
 В случае если напиток неьбыл найден, необходимо возрващать null.
+
+После того как бармен выполнил заказ необходимо вычесть заданное кол-во напитков из запаса бара.
+В случае если запасы закончились нужно удалить напиток из бара.
 */
 public class Bar {
     String name = new String();
@@ -110,6 +113,7 @@ public class Bar {
                 for (int y = 0; y < drinks.length; y++) {
                     if (orders[i].nameOfDrink.equalsIgnoreCase(drinks[y].nameOfDrink)) {
                         drinks[y].countOfItem -= countOfItem;
+                        if (drinks[y].countOfItem <= 0) deleteTheDrink(y);
                         break;
                     }
                 }
@@ -173,6 +177,20 @@ public class Bar {
             }
         }
         return -1;
+    }
+
+    public void deleteTheDrink(int index) {
+        if (index == drinks.length - 1) {
+            drinks[index] = null;
+            storageFreeSpace++;
+        }
+        else {
+            for (int i = index + 1; i < drinks.length; i++) {
+                drinks[i - 1] = drinks[i];
+            }
+            drinks[drinks.length - 1] = null;
+            storageFreeSpace++;
+        }
     }
 
     @Override
