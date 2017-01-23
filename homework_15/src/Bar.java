@@ -222,11 +222,4 @@ public class Bar {
         }
         return false;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 1;
-        hash += name.hashCode();
-        return hash;
-    }
 }
