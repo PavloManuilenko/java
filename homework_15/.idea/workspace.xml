@@ -18,12 +18,12 @@
     <favorites_list name="homework_15" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Bar.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Bar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="71">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="method#hireEmployee#0;class#Bar#0" expanded="false" />
                 <element signature="method#fireEmployee#0;class#Bar#0" expanded="false" />
@@ -35,8 +35,6 @@
                 <element signature="method#getDrinkCount#0;class#Bar#0" expanded="false" />
                 <element signature="method#getDrinkByName#0;class#Bar#0" expanded="false" />
                 <element signature="method#toString#0;class#Bar#0" expanded="false" />
-                <element signature="method#equals#0;class#Bar#0" expanded="false" />
-                <element signature="method#hashCode#0;class#Bar#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -45,8 +43,8 @@
       <file leaf-file-name="Drink.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Drink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="80" lean-forward="false" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+            <state relative-caret-position="340">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="method#toString#0;class#Drink#0" expanded="false" />
                 <element signature="method#equals#0;class#Drink#0" expanded="false" />
@@ -56,13 +54,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BarTest.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BarTest.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BarTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="718" column="1" lean-forward="false" selection-start-line="718" selection-start-column="1" selection-end-line="718" selection-end-column="1" />
+            <state relative-caret-position="289">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
-                <element signature="n#!!block;n#should return string of empty bar#0;n#!!block;n#BarTest#0" expanded="false" />
                 <element signature="n#!!block;n#should return string of bar with one added waiter#0;n#!!block;n#BarTest#0" expanded="false" />
                 <element signature="n#!!block;n#should return string of bar with full staff of waiter even if try to hire more waiter than bar can hold#0;n#!!block;n#BarTest#0" expanded="false" />
                 <element signature="n#!!block;n#should return string of bar with one added barman + default bailiwick cocktail#0;n#!!block;n#BarTest#0" expanded="false" />
@@ -127,9 +124,11 @@
         <option value="$PROJECT_DIR$/src/Order.java" />
         <option value="$PROJECT_DIR$/src/Employee.java" />
         <option value="$PROJECT_DIR$/src/Barman.java" />
-        <option value="$PROJECT_DIR$/src/Bar.java" />
         <option value="$PROJECT_DIR$/src/BarTest.groovy" />
         <option value="$PROJECT_DIR$/src/Drink.java" />
+        <option value="$PROJECT_DIR$/src/Bar.java" />
+        <option value="$PROJECT_DIR$/src/BarTest.java" />
+        <option value="$PROJECT_DIR$/src/BarTest1.java" />
       </list>
     </option>
   </component>
@@ -155,7 +154,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -185,6 +183,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,14 +201,14 @@
       <recent name="spock.lang.Specification" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BarTest">
-    <configuration default="false" name="BarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration default="false" name="BarTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BarTest" />
+      <option name="MAIN_CLASS_NAME" value="BarTest1" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -224,34 +223,13 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BarTest.should return Drink by name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BarTest1.should return null if Drink wasn't found" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BarTest" />
-      <option name="METHOD_NAME" value="should return Drink by name" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BarTest.should return null if Drink wasn't found" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="homework_15" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BarTest" />
+      <option name="MAIN_CLASS_NAME" value="BarTest1" />
       <option name="METHOD_NAME" value="should return null if Drink wasn't found" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -266,13 +244,13 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BarTest.should return Drink by name from list of some drinks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BarTest1.should return Drink by name from list of some drinks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BarTest" />
+      <option name="MAIN_CLASS_NAME" value="BarTest1" />
       <option name="METHOD_NAME" value="should return Drink by name from list of some drinks" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -287,14 +265,35 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BarTest.should return Drink by name from max-list of drinks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BarTest1.should return Drink by name from max-list of drinks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BarTest" />
+      <option name="MAIN_CLASS_NAME" value="BarTest1" />
       <option name="METHOD_NAME" value="should return Drink by name from max-list of drinks" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BarTest1.foo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="homework_15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BarTest1" />
+      <option name="METHOD_NAME" value="foo" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -513,19 +512,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BarTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BarTest.should return Drink by name" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BarTest.should return null if Drink wasn't found" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BarTest.should return Drink by name from list of some drinks" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BarTest.should return Drink by name from max-list of drinks" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BarTest1" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BarTest1.should return null if Drink wasn't found" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BarTest1.should return Drink by name from list of some drinks" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BarTest1.should return Drink by name from max-list of drinks" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BarTest1.foo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BarTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BarTest.should return Drink by name from max-list of drinks" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BarTest.should return null if Drink wasn't found" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BarTest.should return Drink by name from list of some drinks" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BarTest.should return Drink by name" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BarTest1" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BarTest1.foo" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BarTest1.should return Drink by name from max-list of drinks" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BarTest1.should return null if Drink wasn't found" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BarTest1.should return Drink by name from list of some drinks" />
       </list>
     </recent_temporary>
   </component>
@@ -543,26 +542,26 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BarTest - 2016.12.27 at 14h 29m 17s.xml">
+    <history-entry file="BarTest - 2016.12.27 at 16h 40m 27s.xml">
       <configuration name="BarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest - 2016.12.27 at 14h 34m 14s.xml">
+    <history-entry file="BarTest - 2016.12.27 at 16h 40m 35s.xml">
       <configuration name="BarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest - 2016.12.27 at 14h 38m 06s.xml">
+    <history-entry file="BarTest - 2016.12.27 at 16h 40m 41s.xml">
       <configuration name="BarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest - 2016.12.27 at 15h 19m 17s.xml">
+    <history-entry file="BarTest - 2016.12.27 at 16h 40m 47s.xml">
       <configuration name="BarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest_should_return_Drink_by_name_from_max-list_of_drinks - 2016.12.27 at 14h 27m 03s.xml">
-      <configuration name="BarTest.should return Drink by name from max-list of drinks" configurationId="JUnit" />
+    <history-entry file="BarTest - 2016.12.27 at 17h 10m 11s.xml">
+      <configuration name="BarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest_should_return_Drink_by_name_from_max-list_of_drinks - 2016.12.27 at 14h 27m 33s.xml">
-      <configuration name="BarTest.should return Drink by name from max-list of drinks" configurationId="JUnit" />
+    <history-entry file="BarTest1 - 2016.12.27 at 17h 16m 02s.xml">
+      <configuration name="BarTest1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BarTest_should_return_Drink_by_name_from_max-list_of_drinks - 2016.12.27 at 14h 31m 54s.xml">
-      <configuration name="BarTest.should return Drink by name from max-list of drinks" configurationId="JUnit" />
+    <history-entry file="BarTest1_foo - 2016.12.27 at 17h 15m 36s.xml">
+      <configuration name="BarTest1.foo" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BarTest_should_return_Drink_by_name_from_max-list_of_drinks - 2016.12.27 at 14h 32m 57s.xml">
       <configuration name="BarTest.should return Drink by name from max-list of drinks" configurationId="JUnit" />
@@ -575,37 +574,37 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -622,19 +621,166 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Bar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3264">
+          <caret line="192" column="20" lean-forward="false" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
+          <folding>
+            <element signature="method#hireEmployee#0;class#Bar#0" expanded="false" />
+            <element signature="method#fireEmployee#0;class#Bar#0" expanded="false" />
+            <element signature="method#addToStorage#0;class#Bar#0" expanded="false" />
+            <element signature="method#makeOrder#0;class#Bar#0" expanded="false" />
+            <element signature="method#doTheOrder#0;class#Bar#0" expanded="false" />
+            <element signature="method#divideTips#0;class#Bar#0" expanded="false" />
+            <element signature="method#setBailiwickCocktail#0;class#Bar#0" expanded="false" />
+            <element signature="method#getDrinkCount#0;class#Bar#0" expanded="false" />
+            <element signature="method#getDrinkByName#0;class#Bar#0" expanded="false" />
+            <element signature="method#toString#0;class#Bar#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="method#toString#0;class#Drink#0" expanded="false" />
+            <element signature="method#equals#0;class#Drink#0" expanded="false" />
+            <element signature="method#hashCode#0;class#Drink#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BarTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#should return string of bar with one added waiter#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of waiter even if try to hire more waiter than bar can hold#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one added barman + default bailiwick cocktail#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of barmen even if try to hire more barmen than bar can hold#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one added barman with bailiwick cocktail#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of barmen with bailiwick cocktails#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of barmen and waiters#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return only string of bar if fired one existing waiter#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one waiter after firing of all other staff#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return only string of bar if fired one existing barman#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one barman after firing of all other staff#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add to storage one drink#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add to storage all drinks fom menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should refill the drink which just added to storage#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should refill storage for all drinks fom menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to add to storage more drinks than in menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should take one order#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should take max-possible orders#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to take more than max-possible orders#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order more item of dink than bar has#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order 0 item#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order -1 item#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should remove one added order from order list#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should make count of item smaller if complete one order#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should complete all orders from max order list#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should complete different orders (except one) from order list#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add tips to the Bar#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add sum to the Bar if take tips used#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return 0 tips if it was divided#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should divide tips for all staff#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of complete bar#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return one drink's count#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return one of some drink's count#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return flag if drink is absent#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return flag if drink was finished#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return Drink by name#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return Drink by name from max-list of drinks#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return null if Drink wasn't found#0;n#!!block;n#BarTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#hireEmployee#0;class#Bar#0" expanded="false" />
+            <element signature="method#fireEmployee#0;class#Bar#0" expanded="false" />
+            <element signature="method#addToStorage#0;class#Bar#0" expanded="false" />
+            <element signature="method#makeOrder#0;class#Bar#0" expanded="false" />
+            <element signature="method#doTheOrder#0;class#Bar#0" expanded="false" />
+            <element signature="method#divideTips#0;class#Bar#0" expanded="false" />
+            <element signature="method#setBailiwickCocktail#0;class#Bar#0" expanded="false" />
+            <element signature="method#getDrinkCount#0;class#Bar#0" expanded="false" />
+            <element signature="method#getDrinkByName#0;class#Bar#0" expanded="false" />
+            <element signature="method#toString#0;class#Bar#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="80" lean-forward="false" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+          <folding>
+            <element signature="method#toString#0;class#Drink#0" expanded="false" />
+            <element signature="method#equals#0;class#Drink#0" expanded="false" />
+            <element signature="method#hashCode#0;class#Drink#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BarTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#should return string of bar with one added waiter#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of waiter even if try to hire more waiter than bar can hold#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one added barman + default bailiwick cocktail#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of barmen even if try to hire more barmen than bar can hold#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one added barman with bailiwick cocktail#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of barmen with bailiwick cocktails#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with full staff of barmen and waiters#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return only string of bar if fired one existing waiter#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one waiter after firing of all other staff#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return only string of bar if fired one existing barman#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of bar with one barman after firing of all other staff#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add to storage one drink#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add to storage all drinks fom menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should refill the drink which just added to storage#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should refill storage for all drinks fom menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to add to storage more drinks than in menu#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should take one order#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should take max-possible orders#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to take more than max-possible orders#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order more item of dink than bar has#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order 0 item#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#try to order -1 item#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should remove one added order from order list#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should make count of item smaller if complete one order#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should complete all orders from max order list#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should complete different orders (except one) from order list#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add tips to the Bar#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should add sum to the Bar if take tips used#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return 0 tips if it was divided#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should divide tips for all staff#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return string of complete bar#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return one drink's count#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return one of some drink's count#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return flag if drink is absent#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return flag if drink was finished#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return Drink by name#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return Drink by name from max-list of drinks#0;n#!!block;n#BarTest#0" expanded="false" />
+            <element signature="n#!!block;n#should return null if Drink wasn't found#0;n#!!block;n#BarTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://D:/apache-groovy-sdk-2.4.7/groovy-2.4.7/lib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../spock-core-1.0-groovy-2.4.jar!/org/spockframework/runtime/Sputnik.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,31 +846,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bar.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hireEmployee#0;class#Bar#0" expanded="false" />
-            <element signature="method#fireEmployee#0;class#Bar#0" expanded="false" />
-            <element signature="method#addToStorage#0;class#Bar#0" expanded="false" />
-            <element signature="method#makeOrder#0;class#Bar#0" expanded="false" />
-            <element signature="method#doTheOrder#0;class#Bar#0" expanded="false" />
-            <element signature="method#divideTips#0;class#Bar#0" expanded="false" />
-            <element signature="method#setBailiwickCocktail#0;class#Bar#0" expanded="false" />
-            <element signature="method#getDrinkCount#0;class#Bar#0" expanded="false" />
-            <element signature="method#getDrinkByName#0;class#Bar#0" expanded="false" />
-            <element signature="method#toString#0;class#Bar#0" expanded="false" />
-            <element signature="method#equals#0;class#Bar#0" expanded="false" />
-            <element signature="method#hashCode#0;class#Bar#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="298">
+          <caret line="99" column="22" lean-forward="false" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Drink.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="80" lean-forward="false" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="method#toString#0;class#Drink#0" expanded="false" />
             <element signature="method#equals#0;class#Drink#0" expanded="false" />
@@ -735,12 +865,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../spock-core-1.0-groovy-2.4.jar!/org/spockframework/runtime/Sputnik.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../spock-core-1.0-groovy-2.4.jar!/spock/lang/Specification.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BarTest1.java" />
     <entry file="file://$PROJECT_DIR$/src/BarTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="718" column="1" lean-forward="false" selection-start-line="718" selection-start-column="1" selection-end-line="718" selection-end-column="1" />
+        <state relative-caret-position="289">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#should return string of empty bar#0;n#!!block;n#BarTest#0" expanded="false" />
             <element signature="n#!!block;n#should return string of bar with one added waiter#0;n#!!block;n#BarTest#0" expanded="false" />
             <element signature="n#!!block;n#should return string of bar with full staff of waiter even if try to hire more waiter than bar can hold#0;n#!!block;n#BarTest#0" expanded="false" />
             <element signature="n#!!block;n#should return string of bar with one added barman + default bailiwick cocktail#0;n#!!block;n#BarTest#0" expanded="false" />
@@ -779,6 +923,25 @@
             <element signature="n#!!block;n#should return Drink by name#0;n#!!block;n#BarTest#0" expanded="false" />
             <element signature="n#!!block;n#should return Drink by name from max-list of drinks#0;n#!!block;n#BarTest#0" expanded="false" />
             <element signature="n#!!block;n#should return null if Drink wasn't found#0;n#!!block;n#BarTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="method#hireEmployee#0;class#Bar#0" expanded="false" />
+            <element signature="method#fireEmployee#0;class#Bar#0" expanded="false" />
+            <element signature="method#addToStorage#0;class#Bar#0" expanded="false" />
+            <element signature="method#makeOrder#0;class#Bar#0" expanded="false" />
+            <element signature="method#doTheOrder#0;class#Bar#0" expanded="false" />
+            <element signature="method#divideTips#0;class#Bar#0" expanded="false" />
+            <element signature="method#setBailiwickCocktail#0;class#Bar#0" expanded="false" />
+            <element signature="method#getDrinkCount#0;class#Bar#0" expanded="false" />
+            <element signature="method#getDrinkByName#0;class#Bar#0" expanded="false" />
+            <element signature="method#toString#0;class#Bar#0" expanded="false" />
           </folding>
         </state>
       </provider>

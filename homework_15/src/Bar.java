@@ -187,30 +187,16 @@ public class Bar {
         if (obj instanceof Bar) {
             Bar bar = (Bar) obj;
             if (this.name != null && bar.name != null) {
-                boolean equals = bar.name.equals(((Bar) obj).name);
-                if (equals) {
-                    equals = barmen.equals(((Bar) obj).barmen);
-                    if (equals) {
-                        equals = waiters.equals(((Bar) obj).waiters);
-                        if (equals) {
-                            equals = drinks.equals(((Bar) obj).drinks);
-                            if (equals) {
-                                return this.tips == ((Bar) obj).tips;
-                            }
-                        }
-                    }
-                }
+                return bar.name.equals(this.name);
             }
         }
-        return super.equals(obj);
+        return false;
     }
 
     @Override
     public int hashCode() {
         int hash = 1;
         hash += name.hashCode();
-        hash += barmen.hashCode();
-        hash += waiters.hashCode();
         return hash;
     }
 }
