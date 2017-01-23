@@ -23,6 +23,9 @@
 в случае если напиток закончился или не существует необходимо возвращать значение -1.
 У бара необходимо объявить метод getDrinkByName, который вернет объект напитка.
 В случае если напиток неьбыл найден, необходимо возрващать null.
+
+После того как бармен выполнил заказ необходимо вычесть заданное кол-во напитков из запаса бара.
+В случае если запасы закончились нужно удалить напиток из бара.
 */
 public class Bar {
     String name = new String();
@@ -41,7 +44,7 @@ public class Bar {
         this.name = name;
     }
 
-    public void hireEmployee(String name, byte years, String position, Bar bar) {
+    public void hireEmployee(String name, byte years, String position, Bar bar) throws NotExistBarException {
         if (null != bar) {
             if ((position.equalsIgnoreCase("waiter")) && (countOfWaiters > 0)) {
                 Waiter waiter = new Waiter(name, years, bar);
@@ -51,6 +54,7 @@ public class Bar {
                 bar.barmen[barmen.length - countOfBarmen--] = barman;
             }
         }
+        else throw new NotExistBarException("For creating new employee was passed not.");
     }
 
     public void fireEmployee(String name, String position) {
@@ -89,17 +93,16 @@ public class Bar {
         }
     }
 
-    public String makeOrder(String nameOfDrink, int countOfItem) {
-        String makeOrder = "";
+    public void makeOrder(String nameOfDrink, int countOfItem) throws OrderDrinkOverException {
         for (int i = 0; i < (drinks.length - storageFreeSpace); i++) {
             if (drinks[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) {
                 if (drinks[i].countOfItem >= countOfItem) {
                     Order newOrder = new Order((orders.length - volumeOfOrders + 1), drinks[i].nameOfDrink, countOfItem);
                     orders[orders.length - volumeOfOrders--] = newOrder;
-                } else return makeOrder = "Sorry, we don't have enough drinks kind like this.";
+                } else throw new OrderDrinkOverException("Not correct value for order: " +
+                        (orders.length - volumeOfOrders + 1) + ". Requested drink: " + nameOfDrink + " is over.");
             }
         }
-        return makeOrder;
     }
 
     public void doTheOrder(String nameOfDrink, int countOfItem) {
@@ -110,6 +113,7 @@ public class Bar {
                 for (int y = 0; y < drinks.length; y++) {
                     if (orders[i].nameOfDrink.equalsIgnoreCase(drinks[y].nameOfDrink)) {
                         drinks[y].countOfItem -= countOfItem;
+                        if (drinks[y].countOfItem <= 0) deleteTheDrink(y);
                         break;
                     }
                 }
@@ -131,8 +135,9 @@ public class Bar {
 
     }
 
-    void addTips(int tips) {
-        this.tips += tips;
+    void addTips(int tips) throws NegativeTipsException {
+        if (tips <= 0) throw new NegativeTipsException("Tips couldn't be negative. Passed value is: " + tips);
+        else this.tips += tips;
     }
 
     public void divideTips() {
@@ -161,6 +166,31 @@ public class Bar {
             }
         }
         return null;
+    }
+
+    public int lookingForDrink(String nameOfDrink) {
+        for (int i = 0; i < drinks.length; i++) {
+            if (null != drinks[i]) {
+                if (drinks[i].nameOfDrink.equalsIgnoreCase(nameOfDrink)) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
+    public void deleteTheDrink(int index) {
+        if (index == drinks.length - 1) {
+            drinks[index] = null;
+            storageFreeSpace++;
+        }
+        else {
+            for (int i = index + 1; i < drinks.length; i++) {
+                drinks[i - 1] = drinks[i];
+            }
+            drinks[drinks.length - 1] = null;
+            storageFreeSpace++;
+        }
     }
 
     @Override

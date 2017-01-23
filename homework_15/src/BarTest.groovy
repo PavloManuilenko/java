@@ -379,19 +379,16 @@ class BarTest extends spock.lang.Specification {
         actual == expected
     }
 
-    def "try to order more item of dink than bar has"() {
-        given: "bar initialize"
+    def "exception if try to order more item of dink than bar has"() {
+        when: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
         bar.hireEmployee("Pity", (byte)18, "waiter", bar)
         Drink darkBeer = new Drink("Dark Beer", 1)
         bar.addToStorage(darkBeer)
-
-        when: "creation of expecting"
-        def expected = "Sorry, we don't have enough drinks kind like this."
-        def actual = bar.waiters[0].takeOrder("Dark Beer", 2)
+        bar.waiters[0].takeOrder("Dark Beer", 2)
 
         then: "verify"
-        actual == expected
+        thrown OrderDrinkOverException;
     }
 
     def "try to order 0 item"() {
@@ -462,6 +459,78 @@ class BarTest extends spock.lang.Specification {
         actual == expected
     }
 
+    def "should delete drink if it was finished"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
+        Drink darkBeer = new Drink("Dark Beer", 1)
+        bar.addToStorage(darkBeer)
+
+        when: "creation of expecting"
+        bar.waiters[0].takeOrder("Dark Beer", 1)
+        bar.barmen[0].completeOrder("Dark Beer", 1)
+        def expected = null
+        def actual = bar.drinks[0]
+
+        then: "verify"
+        actual == expected
+    }
+
+    def "should delete one (first) drink if it was finished from full storage"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
+        Drink Beer1 = new Drink("Beer1", 1)
+        Drink Beer2 = new Drink("Beer2", 1)
+        Drink Beer3 = new Drink("Beer3", 1)
+        Drink Beer4 = new Drink("Beer4", 1)
+        Drink Beer5 = new Drink("Beer5", 1)
+        bar.addToStorage(Beer1)
+        bar.addToStorage(Beer2)
+        bar.addToStorage(Beer3)
+        bar.addToStorage(Beer4)
+        bar.addToStorage(Beer5)
+
+        when: "creation of expecting"
+        bar.waiters[0].takeOrder("Beer1", 1)
+        bar.barmen[0].completeOrder("Beer1", 1)
+        def expected = "[Name of drink: Beer2, count of item: 1, Name of drink: Beer3, count of item: 1," +
+                " Name of drink: Beer4, count of item: 1, Name of drink: Beer5, count of item: 1, null]"
+        def actual = bar.drinks.toString();
+
+        then: "verify"
+        actual == expected
+    }
+
+    def "should delete one (last) drink if it was finished from full storage"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Pity", (byte)18, "waiter", bar)
+        bar.hireEmployee("Rob", (byte)25, "barman", bar)
+        Drink Beer1 = new Drink("Beer1", 1)
+        Drink Beer2 = new Drink("Beer2", 1)
+        Drink Beer3 = new Drink("Beer3", 1)
+        Drink Beer4 = new Drink("Beer4", 1)
+        Drink Beer5 = new Drink("Beer5", 1)
+        bar.addToStorage(Beer1)
+        bar.addToStorage(Beer2)
+        bar.addToStorage(Beer3)
+        bar.addToStorage(Beer4)
+        bar.addToStorage(Beer5)
+
+        when: "creation of expecting"
+        bar.waiters[0].takeOrder("Beer5", 1)
+        bar.barmen[0].completeOrder("Beer5", 1)
+        def expected = "[Name of drink: Beer1, count of item: 1, Name of drink: Beer2, count of item: 1," +
+                " Name of drink: Beer3, count of item: 1, Name of drink: Beer4, count of item: 1, null]"
+        def actual = bar.drinks.toString();
+
+        then: "verify"
+        actual == expected
+    }
+
     def "should complete all orders from max order list"() {
         given: "bar initialize"
         Bar bar = new Bar("The Blue Oyster")
@@ -524,6 +593,7 @@ class BarTest extends spock.lang.Specification {
         then: "verify"
         actual == expected
     }
+
     //takeTips & divideTips
     def "should add tips to the Bar"() {
         given: "bar initialize"
@@ -580,6 +650,24 @@ class BarTest extends spock.lang.Specification {
         def actual = bar.tipsForEach;
         then: "strings compare"
         actual == expected
+    }
+
+    def "should return exception if tips = 0"() {
+        when: "creation of expecting"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
+        bar.waiters[0].takeTips(0)
+        then: "strings compare"
+        thrown NegativeTipsException;
+    }
+
+    def "should return exception if tips < 0"() {
+        when: "creation of expecting"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
+        bar.waiters[0].takeTips(-1)
+        then: "strings compare"
+        thrown NegativeTipsException;
     }
 
     //max bar's kind of item toString
@@ -715,5 +803,71 @@ class BarTest extends spock.lang.Specification {
 
         then: "strings compare"
         actual == expected
+    }
+
+    //NotExistBarException
+    def "exception if bar not exist"() {
+        when: "bar is null"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter", null)
+
+        then:
+        thrown NotExistBarException;
+    }
+
+    //Different kind of drink
+    def "should add to storage each kind of drink"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        Beer beer = new Beer(1)
+        CocaCola cola = new CocaCola(2)
+        Juice juice = new Juice(3)
+        Vodka vodka = new Vodka(4)
+        bar.addToStorage(beer)
+        bar.addToStorage(cola)
+        bar.addToStorage(juice)
+        bar.addToStorage(vodka)
+
+        when: "creation of expecting string"
+        def expected = "Bar: \"The Blue Oyster\"\nName of drink: Vodka, count of item: 4, volume: 0.7, price: 100" +
+                "\nName of drink: Juice, count of item: 3, volume: 0.5, price: 15" +
+                "\nName of drink: Coca-Cola, count of item: 2, volume: 0.3, price: 10" +
+                "\nName of drink: Beer, count of item: 1, volume: 0.5, price: 25\n\nTips: 0"
+        def actual = bar.toString()
+
+        then: "strings compare"
+        actual == expected
+    }
+
+    //method of calculating the amount of the order
+    def "should return the amount of the possible order"() {
+        given: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
+        Beer beer = new Beer(2)
+        Juice juice = new Juice(2)
+        CocaCola cola = new CocaCola(2)
+        bar.addToStorage(beer)
+        bar.addToStorage(juice)
+        bar.addToStorage(cola)
+
+        when: "creation of expecting string"
+        def expected = 30
+        def actual = bar.waiters[0].calcTheAmountOfTheOrder("juice", 2)
+
+        then: "compare actual and expected"
+        actual == expected
+    }
+
+    def "should return the exception if drink was not found when try to calc amount of the possible order"() {
+        when: "bar initialize"
+        Bar bar = new Bar("The Blue Oyster")
+        bar.hireEmployee("Alex", (byte)30, "waiter", bar)
+        Beer beer = new Beer(1)
+        bar.addToStorage(beer)
+        bar.waiters[0].calcTheAmountOfTheOrder("juice", 1)
+
+        then:
+        thrown DrinkNotFoundException
     }
 }

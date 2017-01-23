@@ -4,6 +4,11 @@
 если в баре недостаточное количество напитка, чтобы выполнить заказ.
 - Метод “взять чаевые” добавляет количество чаевых в общую сумму на баре.
 - Для каждого класса переопределить методы equals(), hashCode() и toString().
+
+Добавить в метод получения чаевых, официантом, проверку на положительное значение.
+В случае если значение чаевых было переданно не корректно нужно сгенерировать исключение NegativeTipsException.
+При этом исключение должно информировать о некорректно заданом значении чаевых. Пример:
+Tips couldn't be negative. Passed value is: -25.
 */
 public class Waiter extends Employee {
 
@@ -11,19 +16,27 @@ public class Waiter extends Employee {
         super(name, years, bar);
     }
 
-    public String takeOrder(String nameOfDrink, int countOfItem) {
+    public String takeOrder(String nameOfDrink, int countOfItem) throws OrderDrinkOverException {
         String takeOrder = new String();
         if (bar.volumeOfOrders <= 0) {
             return takeOrder = "Sorry, we can't accept a new order, please wait for a while.";
         } else if (countOfItem <= 0) {
             return takeOrder = "Sorry, but order like this is impossible to order.";
         } else {
-            takeOrder = bar.makeOrder(nameOfDrink, countOfItem);
+            bar.makeOrder(nameOfDrink, countOfItem);
         }
-        return takeOrder;
+        return takeOrder = "Order was taken";
     }
 
-    public void takeTips(int tips) {
+    public int calcTheAmountOfTheOrder(String nameOfDrink, int countOfItem) throws DrinkNotFoundException {
+        int indexOfDrink = bar.lookingForDrink(nameOfDrink);
+        if (indexOfDrink != -1) {
+            return countOfItem * (bar.drinks[indexOfDrink].getPrice());
+        }
+        else throw new DrinkNotFoundException("Requested drink: " + nameOfDrink + " is not found.");
+    }
+
+    public void takeTips(int tips) throws NegativeTipsException {
         bar.addTips(tips);
     }
 
