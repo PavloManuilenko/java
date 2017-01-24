@@ -2,7 +2,7 @@ package passengers;
 
 public class Boeing737 extends PassengerAirplane{
 
-    public Boeing737(int numberOfPassengers, int capacityOfShipment, int normalSpeed, float fuelConsumption, int volumeOfTank, int numOfStewardess) {
+    public Boeing737(int numberOfPassengers, int capacityOfShipment, int normalSpeed, int fuelConsumption, int volumeOfTank, int numOfStewardess) {
         super(numberOfPassengers, capacityOfShipment, normalSpeed, fuelConsumption, volumeOfTank, numOfStewardess);
     }
 
