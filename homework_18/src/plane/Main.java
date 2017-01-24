@@ -22,7 +22,6 @@ public class Main {
         System.out.println("Airplanes with speed range (450 - 550): " + airlines.getAirplaneBySpeedRange(450, 550));
         System.out.println("Sort by fuel consumption: " + airlines.sortByFuelConsumption());
 
-
     }
 
 }

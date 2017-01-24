@@ -25,7 +25,7 @@ public class Airlines {
         }
         return totalCapacityOfShipment;
     }
-
+/*
     public Airplane[] getAirplaneBySpeedRange(int from, int to)
     {
         List<Airplane> AirplaneList = new ArrayList<>();
@@ -37,6 +37,22 @@ public class Airlines {
             }
         }
         return AirplaneList.toArray(new Airplane[1]);
+    }
+*/
+
+
+    public String getAirplaneBySpeedRange(int from, int to)
+    {
+        List<Airplane> AirplaneList = new ArrayList<>();
+        for (Airplane plane : planes)
+        {
+            if (plane.getSpeed() <= to && plane.getSpeed() >= from)
+            {
+                AirplaneList.add(plane);
+            }
+        }
+        AirplaneList.toArray(new Airplane[1]);
+        return AirplaneList.toString();
     }
 
     public List<Airplane> sortByFuelConsumption()

@@ -23,4 +23,16 @@ public abstract class Airplane {
     public float getFuelConsumption() {
         return fuelConsumption;
     }
+
+
+    @Override
+    public String toString() {
+        return "Airplane{" +
+                "numberOfPassengers = " + numberOfPassengers +
+                ", capacityOfShipment = " + capacityOfShipment +
+                ", normalSpeed = " + normalSpeed +
+                ", fuelConsumption = " + fuelConsumption +
+                ", volumeOfTank = " + volumeOfTank +
+                '}';
+    }
 }
