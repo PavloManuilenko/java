@@ -1,8 +1,8 @@
-package ua.dp.levelup.list
-
+/*package ua.dp.levelup.list
+/*
 /**
  * Created by java on 24.01.2017.
- */
+ *//*
 class SingleLinkedListTest extends spock.lang.Specification {
     def "AddNode"() {
         SingleLinkedList list = new SingleLinkedList();
@@ -21,4 +21,5 @@ class SingleLinkedListTest extends spock.lang.Specification {
         list.size == 2;
         list.root != null;
     }
+    */
 }
