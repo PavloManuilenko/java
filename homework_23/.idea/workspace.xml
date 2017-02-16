@@ -22,24 +22,36 @@
       <file leaf-file-name="ArraysTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ArraysTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="223" column="0" lean-forward="true" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+            <state relative-caret-position="447">
+              <caret line="404" column="0" lean-forward="true" selection-start-line="404" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testOfIntArraysToString#0;class#ArraysTest#0" expanded="false" />
-                <element signature="method#testOfBooleanArraysToString#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testOfStringArraysToString#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testOfDoubleArraysToString#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testOfIntArrayCloneViaCopyOf#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testOfDoubleArrayCloneViaCopyOf#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testOfStringArrayCloneViaCopyOf#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testOfIntArrayCopyOfFullViaCopyOfRange#0;class#ArraysTest#0" expanded="false" />
-                <element signature="method#testOfIntArrayCopyOfBeginViaCopyOfRange#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testOfIntArrayCopyOfEndViaCopyOfRange#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testIllegalArgumentExceptionUsingCopyOfRange#0;class#ArraysTest#0" expanded="false" />
-                <element signature="method#testOfIntSorting#0;class#ArraysTest#0" expanded="false" />
-                <element signature="method#testOfBooleanSorting#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfIntCollectionSorting#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfBooleanCollectionSorting#0;class#ArraysTest#0" expanded="false" />
                 <element signature="method#testOfStringCollectionSorting#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfBinarySearchInIntCollectionWhenElementWasntFound#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfBinarySearchInStringCollectionWhenElementWasntFound#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfIntArraysFilling#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfBooleanArraysFilling#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfDoubleArraysFilling#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfIntArraysEquals#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfBooleanArraysEquals#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfDoubleArraysEquals#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfIntArraysAsList#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfBooleanArraysAsList#0;class#ArraysTest#0" expanded="false" />
+                <element signature="method#testOfStringArraysAsList#0;class#ArraysTest#0" expanded="false" />
+                <marker date="1487266672844" expanded="false" signature="643:993" ph="{...}" />
+                <marker date="1487266672844" expanded="false" signature="3232:3522" ph="{...}" />
+                <marker date="1487266672844" expanded="false" signature="5508:5800" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -157,14 +169,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ArraysTest.testIllegalArgumentExceptionUsingCopyOfRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ArraysTest.testOfBooleanArraysEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ArraysTest" />
-      <option name="METHOD_NAME" value="testIllegalArgumentExceptionUsingCopyOfRange" />
+      <option name="METHOD_NAME" value="testOfBooleanArraysEquals" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -178,14 +190,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ArraysTest.testOfIntSorting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ArraysTest.testOfStringArraysAsList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ArraysTest" />
-      <option name="METHOD_NAME" value="testOfIntSorting" />
+      <option name="METHOD_NAME" value="testOfStringArraysAsList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -199,14 +211,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ArraysTest.testOfBooleanSorting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ArraysTest.testOfBooleanArraysAsList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ArraysTest" />
-      <option name="METHOD_NAME" value="testOfBooleanSorting" />
+      <option name="METHOD_NAME" value="testOfBooleanArraysAsList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -220,14 +232,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ArraysTest.testOfStringSorting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ArraysTest.testOfIntArraysAsList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ArraysTest" />
-      <option name="METHOD_NAME" value="testOfStringSorting" />
+      <option name="METHOD_NAME" value="testOfIntArraysAsList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -447,18 +459,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ArraysTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ArraysTest.testIllegalArgumentExceptionUsingCopyOfRange" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfIntSorting" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfBooleanSorting" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfStringSorting" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfBooleanArraysEquals" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfStringArraysAsList" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfBooleanArraysAsList" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfIntArraysAsList" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.ArraysTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfStringSorting" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfBooleanSorting" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfIntSorting" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ArraysTest.testIllegalArgumentExceptionUsingCopyOfRange" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfIntArraysAsList" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfBooleanArraysAsList" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfStringArraysAsList" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ArraysTest.testOfBooleanArraysEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -476,35 +488,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArraysTest - 2017.02.16 at 11h 44m 00s.xml">
+    <history-entry file="ArraysTest - 2017.02.16 at 19h 36m 57s.xml">
       <configuration name="ArraysTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfBooleanSorting - 2017.02.16 at 11h 34m 10s.xml">
-      <configuration name="ArraysTest.testOfBooleanSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfBooleanArraysAsList - 2017.02.16 at 19h 29m 48s.xml">
+      <configuration name="ArraysTest.testOfBooleanArraysAsList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfBooleanSorting - 2017.02.16 at 11h 34m 29s.xml">
-      <configuration name="ArraysTest.testOfBooleanSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfBooleanArraysAsList - 2017.02.16 at 19h 31m 20s.xml">
+      <configuration name="ArraysTest.testOfBooleanArraysAsList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfBooleanSorting - 2017.02.16 at 11h 34m 36s.xml">
-      <configuration name="ArraysTest.testOfBooleanSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfBooleanArraysAsList - 2017.02.16 at 19h 32m 36s.xml">
+      <configuration name="ArraysTest.testOfBooleanArraysAsList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfBooleanSorting - 2017.02.16 at 11h 34m 46s.xml">
-      <configuration name="ArraysTest.testOfBooleanSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfBooleanArraysAsList - 2017.02.16 at 19h 32m 56s.xml">
+      <configuration name="ArraysTest.testOfBooleanArraysAsList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfBooleanSorting - 2017.02.16 at 11h 34m 56s.xml">
-      <configuration name="ArraysTest.testOfBooleanSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfBooleanArraysAsList - 2017.02.16 at 19h 34m 55s.xml">
+      <configuration name="ArraysTest.testOfBooleanArraysAsList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfIntSorting - 2017.02.16 at 11h 32m 54s.xml">
-      <configuration name="ArraysTest.testOfIntSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfBooleanArraysAsList - 2017.02.16 at 19h 35m 37s.xml">
+      <configuration name="ArraysTest.testOfBooleanArraysAsList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfStringSorting - 2017.02.16 at 11h 37m 59s.xml">
-      <configuration name="ArraysTest.testOfStringSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfBooleanArraysAsList - 2017.02.16 at 19h 36m 14s.xml">
+      <configuration name="ArraysTest.testOfBooleanArraysAsList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfStringSorting - 2017.02.16 at 11h 38m 24s.xml">
-      <configuration name="ArraysTest.testOfStringSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfBooleanArraysAsList - 2017.02.16 at 19h 36m 15s.xml">
+      <configuration name="ArraysTest.testOfBooleanArraysAsList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArraysTest_testOfStringSorting - 2017.02.16 at 11h 38m 51s.xml">
-      <configuration name="ArraysTest.testOfStringSorting" configurationId="JUnit" />
+    <history-entry file="ArraysTest_testOfIntArraysAsList - 2017.02.16 at 19h 36m 46s.xml">
+      <configuration name="ArraysTest.testOfIntArraysAsList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -520,13 +532,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15884861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -546,7 +558,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -581,24 +593,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ArraysTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="223" column="0" lean-forward="true" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+        <state relative-caret-position="447">
+          <caret line="404" column="0" lean-forward="true" selection-start-line="404" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testOfIntArraysToString#0;class#ArraysTest#0" expanded="false" />
-            <element signature="method#testOfBooleanArraysToString#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testOfStringArraysToString#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testOfDoubleArraysToString#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testOfIntArrayCloneViaCopyOf#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testOfDoubleArrayCloneViaCopyOf#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testOfStringArrayCloneViaCopyOf#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testOfIntArrayCopyOfFullViaCopyOfRange#0;class#ArraysTest#0" expanded="false" />
-            <element signature="method#testOfIntArrayCopyOfBeginViaCopyOfRange#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testOfIntArrayCopyOfEndViaCopyOfRange#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testIllegalArgumentExceptionUsingCopyOfRange#0;class#ArraysTest#0" expanded="false" />
-            <element signature="method#testOfIntSorting#0;class#ArraysTest#0" expanded="false" />
-            <element signature="method#testOfBooleanSorting#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfIntCollectionSorting#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfBooleanCollectionSorting#0;class#ArraysTest#0" expanded="false" />
             <element signature="method#testOfStringCollectionSorting#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfBinarySearchInIntCollectionWhenElementWasntFound#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfBinarySearchInStringCollectionWhenElementWasntFound#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfIntArraysFilling#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfBooleanArraysFilling#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfDoubleArraysFilling#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfIntArraysEquals#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfBooleanArraysEquals#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfDoubleArraysEquals#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfIntArraysAsList#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfBooleanArraysAsList#0;class#ArraysTest#0" expanded="false" />
+            <element signature="method#testOfStringArraysAsList#0;class#ArraysTest#0" expanded="false" />
+            <marker date="1487266672844" expanded="false" signature="643:993" ph="{...}" />
+            <marker date="1487266672844" expanded="false" signature="3232:3522" ph="{...}" />
+            <marker date="1487266672844" expanded="false" signature="5508:5800" ph="{...}" />
           </folding>
         </state>
       </provider>

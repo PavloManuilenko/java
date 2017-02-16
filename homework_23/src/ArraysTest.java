@@ -2,6 +2,8 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class ArraysTest {
@@ -167,7 +169,7 @@ public class ArraysTest {
     }
 
     @Test
-    public void testOfIntSorting() {
+    public void testOfIntCollectionSorting() {
         //given
         ArrayList<Integer> numbers = new ArrayList<>(3);
 
@@ -185,7 +187,7 @@ public class ArraysTest {
     }
 
     @Test
-    public void testOfBooleanSorting() {
+    public void testOfBooleanCollectionSorting() {
         //given
         ArrayList<Boolean> booleans = new ArrayList<>(2);
 
@@ -217,6 +219,185 @@ public class ArraysTest {
         Collections.sort(words);
         String expected = "[A, B, C, D]";
         String actual = words.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfBinarySearchInIntCollection() {
+        //given
+        int[] numbers = new int[10];
+
+        for (int i = 0; i < 10; i++) {
+            numbers[i] = i+1;
+        }
+
+        //when
+        int expected = 4;
+        int actual = Arrays.binarySearch(numbers, 5);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfBinarySearchInIntCollectionWhenElementWasntFound () {
+        //given
+        int[] numbers = new int[10];
+
+        for (int i = 0; i < 10; i++) {
+            numbers[i] = i+1;
+        }
+
+        //when
+        int expected = -1;
+        int actual = Arrays.binarySearch(numbers, 0);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfBinarySearchInStringCollectionWhenElementWasntFound () {
+        //given
+        String[] numbers = new String[10];
+
+        for (int i = 0; i < 10; i++) {
+            numbers[i] = "Word #" + i;
+        }
+
+        //when
+        int expected = 2;
+        int actual = Arrays.binarySearch(numbers, "Word #2");
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfIntArraysFilling() {
+        //given
+        int[] arr1 = new int[3];
+
+        //when
+        Arrays.fill(arr1, 120);
+        String expected = "[120, 120, 120]";
+        String actual = Arrays.toString(arr1);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfBooleanArraysFilling() {
+        //given
+        boolean[] arr1 = new boolean[3];
+
+        //when
+        Arrays.fill(arr1, true);
+        String expected = "[true, true, true]";
+        String actual = Arrays.toString(arr1);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleArraysFilling() {
+        //given
+        double[] arr1 = new double[3];
+
+        //when
+        Arrays.fill(arr1, 10.2);
+        String expected = "[10.2, 10.2, 10.2]";
+        String actual = Arrays.toString(arr1);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfIntArraysEquals() {
+        //given
+        int[] arr1 = new int[3];
+        int[] arr2 = new int[]{120, 120, 120};
+
+        //when
+        Arrays.fill(arr1, 120);
+
+        //then
+        assertTrue(Arrays.equals(arr1, arr2));
+    }
+
+    @Test
+    public void testOfBooleanArraysEquals() {
+        //given
+        boolean[] arr1 = new boolean[3];
+        boolean[] arr2 = new boolean[3];
+
+        //when
+        Arrays.fill(arr1, true);
+        Arrays.fill(arr2, true);
+
+        //then
+        assertTrue(Arrays.equals(arr1, arr2));
+
+    }
+
+    @Test
+    public void testOfDoubleArraysEquals() {
+        //given
+        double[] arr1 = new double[3];
+        double[] arr2 = new double[3];
+
+        //when
+        Arrays.fill(arr1, 10.2);
+        Arrays.fill(arr2, 10.2);
+
+        //then
+        assertTrue(Arrays.equals(arr1, arr2));
+    }
+
+    @Test
+    public void testOfIntArraysAsList() {
+        //given
+        int[] numbers = new int[] {1, 2, 3};
+        List<int[]> list = Arrays.asList(numbers);
+
+        //when
+        String expected = "[" + Arrays.toString(numbers) + "]";
+        String actual = Arrays.deepToString(list.toArray());
+
+        //then
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfBooleanArraysAsList() {
+        //given
+        boolean[] booleans = new boolean[] {true, false, true};
+        List<boolean[]> list = Arrays.asList(booleans);
+
+        //when
+        String expected = "[" + Arrays.toString(booleans) + "]";
+        String actual = Arrays.deepToString(list.toArray());
+
+        //then
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStringArraysAsList() {
+        //given
+        String[] words = new String[] { "one", "two", "three"};
+        List<String> list = Arrays.asList(words);
+
+        //when
+        String expected = list.toString();
+        String actual = Arrays.toString(words);
 
         //then
         assertEquals(expected, actual);
