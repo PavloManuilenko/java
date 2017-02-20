@@ -742,4 +742,116 @@ public class CollectionsTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testOfIntListRotate() {
+        //given
+        List<Integer> list = new ArrayList<>(3);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+
+        //when
+        String  expected = "[4, 5, 6, 1, 2, 3]";
+        Collections.rotate(list, 3);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListRotate() {
+        //given
+        List<Double> list = new ArrayList<>(3);
+        list.add(1.01D);
+        list.add(1.02D);
+        list.add(1.03D);
+        list.add(1.04D);
+        list.add(1.05D);
+        list.add(1.06D);
+
+        //when
+        String  expected = "[1.05, 1.06, 1.01, 1.02, 1.03, 1.04]";
+        Collections.rotate(list, 2);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStrListRotate() {
+        //given
+        List<String> list = new ArrayList<>(4);
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+
+        //when
+        String  expected = "[D, A, B, C]";
+        Collections.rotate(list, 1);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfIntListSwap() {
+        //given
+        List<Integer> list = new ArrayList<>(4);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+
+        //when
+        String  expected = "[4, 2, 3, 1]";
+        Collections.swap(list, 0, 3);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListSwap() {
+        //given
+        List<Double> list = new ArrayList<>(4);
+        list.add(1.01D);
+        list.add(1.02D);
+        list.add(1.03D);
+        list.add(1.04D);
+
+        //when
+        String  expected = "[1.01, 1.03, 1.02, 1.04]";
+        Collections.swap(list, 1, 2);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStrListSwap() {
+        //given
+        List<String> list = new ArrayList<>(4);
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+
+        //when
+        String  expected = "[A, D, C, B]";
+        Collections.swap(list, 1, 3);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
 }

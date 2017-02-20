@@ -63,8 +63,8 @@
       <file leaf-file-name="CollectionsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CollectionsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="725" column="9" lean-forward="true" selection-start-line="725" selection-start-column="9" selection-end-line="725" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testOfStringListCopy#0;class#CollectionsTest#0" expanded="false" />
@@ -111,6 +111,12 @@
                 <element signature="method#testOfIntListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
                 <element signature="method#testOfDoubleListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
                 <element signature="method#testOfStrListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
+                <element signature="method#testOfIntListRotate#0;class#CollectionsTest#0" expanded="false" />
+                <element signature="method#testOfDoubleListRotate#0;class#CollectionsTest#0" expanded="false" />
+                <element signature="method#testOfStrListRotate#0;class#CollectionsTest#0" expanded="false" />
+                <element signature="method#testOfIntListSwap#0;class#CollectionsTest#0" expanded="false" />
+                <element signature="method#testOfDoubleListSwap#0;class#CollectionsTest#0" expanded="false" />
+                <element signature="method#testOfStrListSwap#0;class#CollectionsTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -216,15 +222,15 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CollectionsTest.testOfStrListReverseOrder">
-    <configuration default="false" name="CollectionsTest.testOfDoubleListReverse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CollectionsTest">
+    <configuration default="false" name="CollectionsTest.testOfIntListSwap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CollectionsTest" />
-      <option name="METHOD_NAME" value="testOfDoubleListReverse" />
+      <option name="METHOD_NAME" value="testOfIntListSwap" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -238,14 +244,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="CollectionsTest.testOfStrListReverse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CollectionsTest.testOfDoubleListSwap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CollectionsTest" />
-      <option name="METHOD_NAME" value="testOfStrListReverse" />
+      <option name="METHOD_NAME" value="testOfDoubleListSwap" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -259,14 +265,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="CollectionsTest.testOfIntListReverseOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CollectionsTest.testOfStrListSwap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CollectionsTest" />
-      <option name="METHOD_NAME" value="testOfIntListReverseOrder" />
+      <option name="METHOD_NAME" value="testOfStrListSwap" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -280,15 +286,15 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="CollectionsTest.testOfDoubleListReverseOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CollectionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CollectionsTest" />
-      <option name="METHOD_NAME" value="testOfDoubleListReverseOrder" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -301,15 +307,15 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="CollectionsTest.testOfStrListReverseOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ArraysTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="homework_23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CollectionsTest" />
-      <option name="METHOD_NAME" value="testOfStrListReverseOrder" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ArraysTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -527,19 +533,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfDoubleListReverse" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfStrListReverse" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfIntListReverseOrder" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfDoubleListReverseOrder" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfStrListReverseOrder" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfIntListSwap" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfDoubleListSwap" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfStrListSwap" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CollectionsTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ArraysTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfStrListReverseOrder" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfDoubleListReverseOrder" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfIntListReverseOrder" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfStrListReverse" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfDoubleListReverse" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CollectionsTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ArraysTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfStrListSwap" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfDoubleListSwap" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CollectionsTest.testOfIntListSwap" />
       </list>
     </recent_temporary>
   </component>
@@ -575,39 +581,46 @@
       <option name="project" value="LOCAL" />
       <updated>1487588130217</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add new tests into CollectionsTest of hw_23">
+      <created>1487595474932</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1487595474932</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CollectionsTest - 2017.02.20 at 14h 46m 17s.xml">
+    <history-entry file="ArraysTest - 2017.02.20 at 15h 50m 08s.xml">
+      <configuration name="ArraysTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CollectionsTest - 2017.02.20 at 15h 50m 04s.xml">
       <configuration name="CollectionsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectionsTest_testOfDoubleListReplaceAll - 2017.02.20 at 14h 45m 18s.xml">
-      <configuration name="CollectionsTest.testOfDoubleListReplaceAll" configurationId="JUnit" />
+    <history-entry file="CollectionsTest - 2017.02.20 at 15h 50m 13s.xml">
+      <configuration name="CollectionsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectionsTest_testOfDoubleListReverse - 2017.02.20 at 14h 49m 01s.xml">
-      <configuration name="CollectionsTest.testOfDoubleListReverse" configurationId="JUnit" />
+    <history-entry file="CollectionsTest_testOfDoubleListSwap - 2017.02.20 at 15h 48m 22s.xml">
+      <configuration name="CollectionsTest.testOfDoubleListSwap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectionsTest_testOfDoubleListReverseOrder - 2017.02.20 at 14h 56m 34s.xml">
-      <configuration name="CollectionsTest.testOfDoubleListReverseOrder" configurationId="JUnit" />
+    <history-entry file="CollectionsTest_testOfIntListSwap - 2017.02.20 at 15h 46m 29s.xml">
+      <configuration name="CollectionsTest.testOfIntListSwap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectionsTest_testOfIntListReplaceAll - 2017.02.20 at 14h 45m 09s.xml">
-      <configuration name="CollectionsTest.testOfIntListReplaceAll" configurationId="JUnit" />
+    <history-entry file="CollectionsTest_testOfIntListSwap - 2017.02.20 at 15h 46m 51s.xml">
+      <configuration name="CollectionsTest.testOfIntListSwap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectionsTest_testOfIntListReverse - 2017.02.20 at 14h 48m 17s.xml">
-      <configuration name="CollectionsTest.testOfIntListReverse" configurationId="JUnit" />
+    <history-entry file="CollectionsTest_testOfIntListSwap - 2017.02.20 at 15h 47m 22s.xml">
+      <configuration name="CollectionsTest.testOfIntListSwap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectionsTest_testOfIntListReverseOrder - 2017.02.20 at 14h 56m 14s.xml">
-      <configuration name="CollectionsTest.testOfIntListReverseOrder" configurationId="JUnit" />
+    <history-entry file="CollectionsTest_testOfStrListRotate - 2017.02.20 at 15h 41m 08s.xml">
+      <configuration name="CollectionsTest.testOfStrListRotate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectionsTest_testOfStrListReverse - 2017.02.20 at 14h 49m 13s.xml">
-      <configuration name="CollectionsTest.testOfStrListReverse" configurationId="JUnit" />
+    <history-entry file="CollectionsTest_testOfStrListRotate - 2017.02.20 at 15h 41m 19s.xml">
+      <configuration name="CollectionsTest.testOfStrListRotate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectionsTest_testOfStrListReverse - 2017.02.20 at 14h 49m 22s.xml">
-      <configuration name="CollectionsTest.testOfStrListReverse" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CollectionsTest_testOfStrListReverseOrder - 2017.02.20 at 14h 56m 45s.xml">
-      <configuration name="CollectionsTest.testOfStrListReverseOrder" configurationId="JUnit" />
+    <history-entry file="CollectionsTest_testOfStrListSwap - 2017.02.20 at 15h 49m 02s.xml">
+      <configuration name="CollectionsTest.testOfStrListSwap" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -755,6 +768,12 @@
             <element signature="method#testOfIntListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
             <element signature="method#testOfDoubleListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
             <element signature="method#testOfStrListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfIntListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfDoubleListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfStrListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfIntListSwap#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfDoubleListSwap#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfStrListSwap#0;class#CollectionsTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -845,12 +864,26 @@
             <element signature="method#testOfIntListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
             <element signature="method#testOfDoubleListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
             <element signature="method#testOfStrListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfIntListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfDoubleListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfStrListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfIntListSwap#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfDoubleListSwap#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfStrListSwap#0;class#CollectionsTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Arrays.java" />
     <entry file="file://$PROJECT_DIR$/src/Collections.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="836" column="30" lean-forward="false" selection-start-line="836" selection-start-column="30" selection-end-line="836" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ArraysTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -887,18 +920,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="836" column="30" lean-forward="false" selection-start-line="836" selection-start-column="30" selection-end-line="836" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CollectionsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="725" column="9" lean-forward="true" selection-start-line="725" selection-start-column="9" selection-end-line="725" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testOfStringListCopy#0;class#CollectionsTest#0" expanded="false" />
@@ -945,6 +970,12 @@
             <element signature="method#testOfIntListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
             <element signature="method#testOfDoubleListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
             <element signature="method#testOfStrListReverseOrderAndSort#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfIntListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfDoubleListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfStrListRotate#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfIntListSwap#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfDoubleListSwap#0;class#CollectionsTest#0" expanded="false" />
+            <element signature="method#testOfStrListSwap#0;class#CollectionsTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
