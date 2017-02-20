@@ -1,8 +1,7 @@
 import org.junit.Test;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+
+import java.util.*;
+
 import static org.junit.Assert.*;
 
 public class CollectionsTest {
@@ -275,7 +274,7 @@ public class CollectionsTest {
     }
 
     @Test
-    public void testOfIndListIndexOfSubList() {
+    public void testOfIntListIndexOfSubList() {
         //given
         List<Integer> listA = new ArrayList(5);
         List<Integer> listB = new ArrayList(5);
@@ -347,7 +346,7 @@ public class CollectionsTest {
     }
 
     @Test
-    public void testOfIndListLastIndexOfSubList() {
+    public void testOfIntListLastIndexOfSubList() {
         //given
         List<Integer> listA = new ArrayList(5);
         List<Integer> listB = new ArrayList(5);
@@ -394,7 +393,353 @@ public class CollectionsTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testOfDoubleEnumerationToList() {
+        //given
+        List arrList = new ArrayList();
+        Vector vector = new Vector();
+
+        //when
+        vector.add(5.1D);
+        vector.add(5.2D);
+        vector.add(5.3D);
+
+        Enumeration<Double> enumeration = vector.elements();
+
+        arrList = Collections.list(enumeration);
+
+        String expected = "[5.1, 5.2, 5.3]";
+        String actual = arrList.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStringEnumerationToList() {
+        //given
+        List arrList = new ArrayList();
+        Vector vector = new Vector();
+
+        //when
+        vector.add("A");
+        vector.add("B");
+        vector.add("C");
+
+        Enumeration<String> enumeration = vector.elements();
+
+        arrList = Collections.list(enumeration);
+
+        String expected = "[A, B, C]";
+        String actual = arrList.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfBooleanEnumerationToList() {
+        //given
+        List arrList;
+        Vector vector = new Vector();
+
+        //when
+        vector.add(true);
+        vector.add(false);
+        vector.add(true);
+
+        Enumeration<Boolean> enumeration = vector.elements();
+
+        arrList = Collections.list(enumeration);
+
+        String expected = "[true, false, true]";
+        String actual = arrList.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfIntListMaxElem() {
+        //given
+        List<Integer> list = new ArrayList(5);
+
+        //when
+        list.add(0);
+        list.add(2);
+        list.add(-3);
+        list.add(4);
+        list.add(0);
+
+        int expected = 4;
+        int actual = Collections.max(list, null);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListMaxElem() {
+        //given
+        List<Double> list = new ArrayList(5);
+
+        //when
+        list.add(0D);
+        list.add(2.5D);
+        list.add(-3.1D);
+        list.add(2.6D);
+        list.add(2.59D);
+
+        Double expected = 2.6D;
+        Double actual = Collections.max(list, null);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test (expected = NoSuchElementException.class)
+    public void testOfEmptyListMaxElem() {
+        List<Double> list = new ArrayList(5);
+
+        Double actual = Collections.max(list, null);
+    }
+
+    @Test
+    public void testOfIntListMinElem() {
+        //given
+        List<Integer> list = new ArrayList(5);
+
+        //when
+        list.add(1);
+        list.add(2);
+        list.add(-1);
+        list.add(3);
+        list.add(-2);
+
+        int expected = -2;
+        int actual = Collections.min(list, null);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListMinElem() {
+        //given
+        List<Double> list = new ArrayList(5);
+
+        //when
+        list.add(0.1D);
+        list.add(0.11D);
+        list.add(-0.1D);
+        list.add(-0.11D);
+        list.add(0D);
+
+        Double expected = -0.11D;
+        Double actual = Collections.min(list, null);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test (expected = NoSuchElementException.class)
+    public void testOfEmptyListMinElem() {
+        List<Double> list = new ArrayList(5);
+
+        Double actual = Collections.min(list, null);
+    }
+
+    @Test
+    public void testOfIntListNCopies() {
+        //given
+        List<Integer> list = Collections.nCopies(5, 100);
+
+        //when
+        String  expected = "[100, 100, 100, 100, 100]";
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStrListNCopies() {
+        //given
+        List<String> list = Collections.nCopies(3, "Test");
+
+        //when
+        String  expected = "[Test, Test, Test]";
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testOfEmptyListNCopies() {
+        List<Integer> list = Collections.nCopies(-1, 1);
+    }
+
+    @Test
+    public void testOfIntListReplaceAll() {
+        //given
+        List<Integer> list = new ArrayList<>(3);
+        list.add(0);
+        list.add(2);
+        list.add(3);
+
+        //when
+        String  expected = "[1, 2, 3]";
+        Collections.replaceAll(list, 0, 1);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListReplaceAll() {
+        //given
+        List<Double> list = new ArrayList<>(3);
+        list.add(1.1D);
+        list.add(1.11D);
+        list.add(1.3D);
 
 
+        //when
+        String  expected = "[1.1, 1.2, 1.3]";
+        Collections.replaceAll(list, 1.11D, 1.2D);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStrListReplaceAll() {
+        //given
+        List<String> list = new ArrayList<>(4);
+        list.add("Z");
+        list.add("B");
+        list.add("C");
+        list.add("Z");
+
+        //when
+        String  expected = "[A, B, C, A]";
+        Collections.replaceAll(list, "Z", "A");
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfIntListReverse() {
+        //given
+        List<Integer> list = new ArrayList<>(3);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        //when
+        String  expected = "[3, 2, 1]";
+        Collections.reverse(list);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListReverse() {
+        //given
+        List<Double> list = new ArrayList<>(3);
+        list.add(1.01D);
+        list.add(1.02D);
+        list.add(1.03D);
+
+
+        //when
+        String  expected = "[1.03, 1.02, 1.01]";
+        Collections.reverse(list);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStrListReverse() {
+        //given
+        List<String> list = new ArrayList<>(4);
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+
+        //when
+        String  expected = "[D, C, B, A]";
+        Collections.reverse(list);
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfIntListReverseOrderAndSort() {
+        //given
+        List<Integer> list = new ArrayList<>(3);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        //when
+        Comparator comparator = Collections.reverseOrder();
+        Collections.sort(list, comparator);
+        String  expected = "[3, 2, 1]";
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListReverseOrderAndSort() {
+        //given
+        List<Double> list = new ArrayList<>(3);
+        list.add(1.01D);
+        list.add(1.02D);
+        list.add(1.03D);
+
+
+        //when
+        Comparator comparator = Collections.reverseOrder();
+        Collections.sort(list, comparator);
+        String  expected = "[1.03, 1.02, 1.01]";
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStrListReverseOrderAndSort() {
+        //given
+        List<String> list = new ArrayList<>(4);
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+
+        //when
+        Comparator comparator = Collections.reverseOrder();
+        Collections.sort(list, comparator);
+        String  expected = "[D, C, B, A]";
+        String actual = list.toString();
+
+        //then
+        assertEquals(expected, actual);
+    }
 
 }
