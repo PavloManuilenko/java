@@ -15,7 +15,7 @@ public class Lamp extends ArtificialLight{
     }
 
     public static int getQuantity() {
-        System.out.println("Number of light sources: " + quantity);
+        System.out.printf("Number of light sources: %d", quantity);
         return quantity;
     }
 
