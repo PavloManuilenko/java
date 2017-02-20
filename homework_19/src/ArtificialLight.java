@@ -20,12 +20,7 @@ public abstract class ArtificialLight implements SourceOfLight {
 
     @Override
     public String isShining() {
-        if (shining) {
-            return "Shining!";
-        }
-        else {
-            return "Darkness.";
-        }
+        return shining ? "Shining!" : "Darkness.";
     }
 
     public String getSourceName() {
