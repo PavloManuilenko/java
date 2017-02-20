@@ -274,5 +274,127 @@ public class CollectionsTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testOfIndListIndexOfSubList() {
+        //given
+        List<Integer> listA = new ArrayList(5);
+        List<Integer> listB = new ArrayList(5);
+
+        //when
+        listA.add(1);
+        listA.add(2);
+        listA.add(3);
+        listA.add(4);
+        listA.add(5);
+
+        listB.add(1);
+        listB.add(2);
+
+        int expected = 0;
+        int actual = Collections.indexOfSubList(listA, listB);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListIndexOfSubList() {
+        //given
+        List<Double> listA = new ArrayList(5);
+        List<Double> listB = new ArrayList(5);
+
+        //when
+        listA.add(5.1D);
+        listA.add(5.11D);
+        listA.add(5.12D);
+        listA.add(5.13D);
+        listA.add(5.14D);
+
+
+        listB.add(5.12D);
+        listB.add(5.13D);
+        listB.add(5.14D);
+
+        int expected = 2;
+        int actual = Collections.indexOfSubList(listA, listB);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfStringListLastIndexOfSubList() {
+        //given
+        List<String> listA = new ArrayList(5);
+        List<String> listB = new ArrayList(5);
+
+        //when
+        listA.add("A");
+        listA.add("B");
+        listA.add("C");
+        listA.add("D");
+        listA.add("E");
+
+        listB.add("C");
+        listB.add("D");
+        listB.add("E");
+
+        int expected = 2;
+        int actual = Collections.lastIndexOfSubList(listA, listB);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfIndListLastIndexOfSubList() {
+        //given
+        List<Integer> listA = new ArrayList(5);
+        List<Integer> listB = new ArrayList(5);
+
+        //when
+        listA.add(1);
+        listA.add(2);
+        listA.add(3);
+        listA.add(4);
+        listA.add(5);
+
+        listB.add(1);
+        listB.add(2);
+
+        int expected = 0;
+        int actual = Collections.lastIndexOfSubList(listA, listB);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testOfDoubleListLastIndexOfSubList() {
+        //given
+        List<Double> listA = new ArrayList(5);
+        List<Double> listB = new ArrayList(5);
+
+        //when
+        listA.add(5.1D);
+        listA.add(5.11D);
+        listA.add(5.12D);
+        listA.add(5.13D);
+        listA.add(5.14D);
+
+
+        listB.add(5.12D);
+        listB.add(5.13D);
+        listB.add(5.14D);
+
+        int expected = 2;
+        int actual = Collections.lastIndexOfSubList(listA, listB);
+
+        //then
+        assertEquals(expected, actual);
+    }
+
+
+
 
 }
