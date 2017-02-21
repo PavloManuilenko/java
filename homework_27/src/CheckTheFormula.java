@@ -44,10 +44,17 @@ public class CheckTheFormula {
 
     //logic of verifying a formula
     public String checker(String sourceStr) {
-        String checkedString = "\r\n";
+        String checkedString = "";
 
+        for (int i = 0; i < sourceStr.length(); i++) {
+            if (sourceStr.charAt(i) == '(') {
+                checkedString += "^";
+            }
+            else {
+                checkedString += " ";
+            }
+        }
 
-
-        return checkedString;
+        return checkedString + "\r\n";
     }
 }
