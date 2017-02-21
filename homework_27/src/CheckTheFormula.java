@@ -42,9 +42,12 @@ public class CheckTheFormula {
         }
     }
 
-    //temp method
+    //logic of verifying a formula
     public String checker(String sourceStr) {
-        String checkedString = "";
+        String checkedString = "\r\n";
+
+
+
         return checkedString;
     }
 }
