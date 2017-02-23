@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Arrays;
 
 public class CheckTheFormula {
 
@@ -44,17 +45,24 @@ public class CheckTheFormula {
 
     //logic of verifying a formula
     public String checker(String sourceStr) {
-        String checkedString = "";
-
-        for (int i = 0; i < sourceStr.length(); i++) {
-            if (sourceStr.charAt(i) == '(') {
-                checkedString += "^";
-            }
-            else {
-                checkedString += " ";
+        String checkedString = new String();
+        char[] strCopy = sourceStr.toCharArray();
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < strCopy.length; i++) {
+            if (strCopy[i] == '(') {
+                for (int j = i + 1; j < strCopy.length; j++) {
+                    if (strCopy[j] == ')') {
+                        strCopy[i] = ' ';
+                        strCopy[j] = ' ';
+                        break;
+                    }
+                }
             }
         }
-
-        return checkedString + "\r\n";
+        for (int i = 0; i < strCopy.length; i++) {
+            if (strCopy[i] == '(') builder.append('^');
+            else builder.append(strCopy[i]);
+        }
+        return checkedString = builder.toString() + "\r\n";
     }
 }
