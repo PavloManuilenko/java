@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<Customer> listOfCustomer = ParserCSV.ParseToCustomer("customer.csv");
+        List<Customer> listOfCustomer = ParserCSV.parseToCustomer("customer.csv");
         System.out.println(listOfCustomer.toString());
     }
 }

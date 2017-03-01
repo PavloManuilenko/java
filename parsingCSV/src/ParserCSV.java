@@ -3,25 +3,24 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class ParserCSV {
 
-    public static List<Customer> ParseToCustomer(String fileCSV) {
+    public static List<Customer> parseToCustomer(String fileCSV) {
         List<Customer> listOfCustomer = new ArrayList<>();
+
         try (BufferedReader reader = new BufferedReader(new FileReader(fileCSV))){
             String line;
             while (null != (line = reader.readLine())) {
                 if (!line.startsWith("id")) {
-                    Scanner scanner = new Scanner(line);
-                    scanner.useDelimiter(";");
+                    String[] fields = line.split(";");
 
-                    long id = scanner.nextLong();
-                    String fName = scanner.next();
-                    String lName = scanner.next();
-                    String mail = scanner.next();
-                    String pass = scanner.next();
-                    int storeFront = scanner.nextInt();
+                    long id = Long.valueOf(fields[0]);
+                    String fName = fields[1];
+                    String lName = fields[2];
+                    String mail = fields[3];
+                    String pass = fields[4];
+                    int storeFront = Integer.valueOf(fields[5]);
 
                     listOfCustomer.add(new Customer(id, fName, lName, mail, pass, storeFront));
                 }
