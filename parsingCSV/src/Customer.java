@@ -63,4 +63,16 @@ public class Customer {
     public int getStoreFront() {
         return storeFront;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", fName='" + fName + '\'' +
+                ", lName='" + lName + '\'' +
+                ", mail='" + mail + '\'' +
+                ", pass='" + pass + '\'' +
+                ", storeFront=" + storeFront +
+                '}';
+    }
 }

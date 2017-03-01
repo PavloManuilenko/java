@@ -11,18 +11,20 @@ public class ParserCSV {
         List<Customer> listOfCustomer = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(fileCSV))){
             String line;
-            while (null != (line = reader.readLine()) && !line.startsWith("id")) {
-                Scanner scanner = new Scanner(line);
-                scanner.useDelimiter(";");
+            while (null != (line = reader.readLine())) {
+                if (!line.startsWith("id")) {
+                    Scanner scanner = new Scanner(line);
+                    scanner.useDelimiter(";");
 
-                long id = scanner.nextLong();
-                String fName = scanner.next();
-                String lName = scanner.next();
-                String mail = scanner.next();
-                String pass = scanner.next();
-                int storeFront = scanner.nextInt();
+                    long id = scanner.nextLong();
+                    String fName = scanner.next();
+                    String lName = scanner.next();
+                    String mail = scanner.next();
+                    String pass = scanner.next();
+                    int storeFront = scanner.nextInt();
 
-                listOfCustomer.add(new Customer(id, fName, lName, mail, pass, storeFront));
+                    listOfCustomer.add(new Customer(id, fName, lName, mail, pass, storeFront));
+                }
             }
 
         } catch (IOException e) {
