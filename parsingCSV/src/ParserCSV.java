@@ -9,7 +9,7 @@ public class ParserCSV {
     public static List<Customer> parseToCustomer(String fileCSV) {
         List<Customer> listOfCustomer = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileCSV))){
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileCSV))) {
             String line;
             while (null != (line = reader.readLine())) {
                 if (!line.startsWith("id")) {
@@ -25,7 +25,6 @@ public class ParserCSV {
                     listOfCustomer.add(new Customer(id, fName, lName, mail, pass, storeFront));
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
